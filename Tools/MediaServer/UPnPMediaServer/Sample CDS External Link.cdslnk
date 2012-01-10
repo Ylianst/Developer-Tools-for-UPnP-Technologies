@@ -1,0 +1,9 @@
+<DIDL-Lite xmlns="urn:schemas-upnp-org:metadata-1-0/DIDL-Lite" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:upnp="urn:schemas-upnp-org:metadata-1-0/upnp">
+  <item id="" parentID="" restricted="true">
+    <dc:title>Sample CDS External Link</dc:title>
+    <upnp:class>object.item.audioItem</upnp:class>
+    <dc:creator>OpenSource</dc:creator>
+    <upnp:writeStatus>UNKNOWN</upnp:writeStatus>
+    <res protocolInfo="http-get:*:audio/x-ms-wma:*" size="4994974">http://172.16.0.1:80/</res>
+  </item>
+</DIDL-Lite>

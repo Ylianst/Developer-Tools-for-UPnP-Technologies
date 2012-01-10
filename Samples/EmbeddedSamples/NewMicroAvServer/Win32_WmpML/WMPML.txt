@@ -1,0 +1,17 @@
+WMPML Sample
+
+This C++ sample demonstrates how to use the Media Library functionality of the Windows Media Player 9 Series object model.
+
+The sample embeds the ActiveX control with a visible user interface. It creates a tree view control labeled "Media Library list" that imitates the Media Library user interface in the Player. The list box called "Item list" shows the media items in the currently selected tree node. Clicking an item in the item list displays the metadata for that item in the list box labeled "Metadata". Double-clicking a media item in the item list plays the item.
+
+The Player control is remoted by default. Although this sample does not write metadata to Media Library, applications that write metadata should use a remoted control to ensure that media items in Media Library can update file-level metadata. Clicking Go To Media Library switches focus to the Player application with the Media Library feature open.
+
+You can run the sample without remoting the Player control by using a command line parameter. To run the sample with a local control, click Start, then Run, then type:
+
+<path>\WMPML.exe /local
+
+where <path> represents the full path to the folder that contains the compiled executable you created by building the sample. Click OK to run the executable.
+
+The Playlist menu allows the user to add a new playlist, import an existing playlist, or delete a playlist from Media Library. The Media menu allows you to add or delete a URL or file to Media Library. 
+
+Copyright (c) Microsoft Corporation. All rights reserved.

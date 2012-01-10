@@ -1,0 +1,17 @@
+ 
+// Commands (ID_* and IDM_*) 
+HIDM_ABOUTBOX                           0x10010
+HID_UPNP_ONSHUTDOWN                     0x10068
+ 
+// Prompts (IDP_*) 
+ 
+// Resources (IDR_*) 
+HIDR_MANIFEST                           0x20001
+HIDR_WIN32_WML                          0x20067
+HIDR_MAINFRAME                          0x20080
+ 
+// Dialogs (IDD_*) 
+HIDD_ABOUTBOX                           0x20064
+HIDD_WIN32_WML_DIALOG                   0x20066
+ 
+// Frame Controls (IDW_*) 

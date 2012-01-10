@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<scpd xmlns="urn:schemas-upnp-org:service-1-0:ConnectionManager:1.0">
+    <specVersion>
+        <major>1</major>
+        <minor>0</minor>
+    </specVersion>
+    <actionList>
+        <action>
+            <name>GetProtocolInfo</name>
+            <argumentList>
+                <argument>
+                    <name>Source</name>
+                    <direction>out</direction>               <relatedStateVariable>SourceProtocolInfo</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>Sink</name>
+                    <direction>out</direction>               <relatedStateVariable>SinkProtocolInfo</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+  <action>
+            <name>PrepareForConnection</name>
+            <argumentList>
+                <argument>
+                    <name>RemoteProtocolInfo</name>
+                    <direction>in</direction>                    <relatedStateVariable>A_ARG_TYPE_ProtocolInfo</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>PeerConnectionManager</name>
+                    <direction>in</direction>                  <relatedStateVariable>A_ARG_TYPE_ConnectionManager</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>Direction</name>
+                    <direction>in</direction>                    <relatedStateVariable>A_ARG_TYPE_Direction</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>ConnectionId</name>
+                    <direction>out</direction>                    <relatedStateVariable>A_ARG_TYPE_ConnectionId</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>AVTransportId</name>
+                    <direction>out</direction>                    <relatedStateVariable>A_ARG_TYPE_AVTransportId</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>RcsId</name>
+                    <direction>out</direction>                    <relatedStateVariable>A_ARG_TYPE_RcsId</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+        <action>
+            <name>ConnectionComplete</name>
+            <argumentList>
+                <argument>
+                    <name>ConnectionId</name>
+                    <direction>in</direction>                    <relatedStateVariable>A_ARG_TYPE_ConnectionId</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+        <action>
+            <name>GetCurrentConnectionIds</name>
+            <argumentList>
+                <argument>
+                    <name>ConnectionIds</name>
+                    <direction>out</direction>                    <relatedStateVariable>CurrentConnectionIds</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+        <action>
+            <name>GetCurrentConnectionInfo</name>
+            <argumentList>
+                <argument>
+                    <name>ConnectionId</name>
+                    <direction>in</direction>                   <relatedStateVariable>A_ARG_TYPE_ConnectionId</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>RcsId</name>
+                    <direction>out</direction>                    <relatedStateVariable>A_ARG_TYPE_RcsId</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>AVTransportId</name>
+                    <direction>out</direction>                    <relatedStateVariable>A_ARG_TYPE_AVTransportId</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>ProtocolInfo</name>
+                    <direction>out</direction>                    <relatedStateVariable>A_ARG_TYPE_ProtocolInfo</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>PeerConnectionManager</name>
+                    <direction>out</direction>                    <relatedStateVariable>A_ARG_TYPE_ConnectionManager</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>Direction</name>
+                    <direction>out</direction>                    <relatedStateVariable>A_ARG_TYPE_Direction</relatedStateVariable>
+                </argument>
+                <argument>
+                    <name>Status</name>
+                    <direction>out</direction>                    <relatedStateVariable>A_ARG_TYPE_ConnectionStatus</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+    </actionList>
+    <serviceStateTable>
+        <stateVariable sendEvents="yes">
+            <name>SourceProtocolInfo</name>
+            <dataType>string</dataType>
+        </stateVariable>
+        <stateVariable sendEvents="yes">
+            <name>SinkProtocolInfo</name>
+            <dataType>string</dataType>
+        </stateVariable>
+        <stateVariable sendEvents="yes">
+            <name>CurrentConnectionIds</name>
+            <dataType>string</dataType>
+        </stateVariable>
+        <stateVariable sendEvents="yes">
+            <name>PhysicalConnections</name>
+            <dataType>string</dataType>
+        </stateVariable>
+        <stateVariable sendEvents="no">
+            <name>A_ARG_TYPE_ConnectionStatus</name>
+            <dataType>string</dataType>
+            <allowedValueList>
+                <allowedValue>OK</allowedValue>
+                <allowedValue>ContentFormatMismatch</allowedValue>
+                <allowedValue>InsufficientBandwidth</allowedValue>
+                <allowedValue>UnreliableChannel</allowedValue>
+                <allowedValue>Unknown</allowedValue>
+            </allowedValueList>
+        </stateVariable>
+        <stateVariable sendEvents="no">
+            <name>A_ARG_TYPE_ConnectionManager</name>
+            <dataType>string</dataType>
+        </stateVariable>
+        <stateVariable sendEvents="no">
+            <name>A_ARG_TYPE_Direction</name>
+            <dataType>string</dataType>
+            <allowedValueList>
+                <allowedValue>Input</allowedValue>
+                <allowedValue>Output</allowedValue>
+            </allowedValueList>
+        </stateVariable>
+        <stateVariable sendEvents="no">
+            <name>A_ARG_TYPE_ProtocolInfo</name>
+            <dataType>string</dataType>
+        </stateVariable>
+        <stateVariable sendEvents="no">
+            <name>A_ARG_TYPE_ConnectionId</name>
+            <dataType>ui4</dataType>
+        </stateVariable>
+        <stateVariable sendEvents="no">
+            <name>A_ARG_TYPE_AVTransportId</name>
+            <dataType>i4</dataType>
+        </stateVariable>
+        <stateVariable sendEvents="no">
+            <name>A_ARG_TYPE_RcsId</name>
+            <dataType>i4</dataType>
+        </stateVariable>
+    </serviceStateTable>
+</scpd>

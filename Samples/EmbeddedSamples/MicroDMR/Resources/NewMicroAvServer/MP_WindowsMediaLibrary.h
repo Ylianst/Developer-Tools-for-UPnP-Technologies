@@ -1,0 +1,6 @@
+#ifndef _MP_WINDOWS_MEDIA_LIBRARY
+#define _MP_WINDOWS_MEDIA_LIBRARY
+
+
+
+#endif

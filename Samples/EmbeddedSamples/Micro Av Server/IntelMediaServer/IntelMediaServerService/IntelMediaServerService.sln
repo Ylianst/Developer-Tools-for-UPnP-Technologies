@@ -1,0 +1,26 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntelMediaServerService", "IntelMediaServerService.vcproj", "{77D32073-E6BF-4C92-B378-4C9715CCA0C8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntelMediaServerServicePS", "IntelMediaServerServicePS.vcproj", "{40743B5D-2837-4291-98E4-3AD368658896}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{40743B5D-2837-4291-98E4-3AD368658896}.0 = {77D32073-E6BF-4C92-B378-4C9715CCA0C8}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{77D32073-E6BF-4C92-B378-4C9715CCA0C8}.Debug.ActiveCfg = Debug|Win32
+		{77D32073-E6BF-4C92-B378-4C9715CCA0C8}.Debug.Build.0 = Debug|Win32
+		{77D32073-E6BF-4C92-B378-4C9715CCA0C8}.Release.ActiveCfg = Release|Win32
+		{77D32073-E6BF-4C92-B378-4C9715CCA0C8}.Release.Build.0 = Release|Win32
+		{40743B5D-2837-4291-98E4-3AD368658896}.Debug.ActiveCfg = Debug|Win32
+		{40743B5D-2837-4291-98E4-3AD368658896}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

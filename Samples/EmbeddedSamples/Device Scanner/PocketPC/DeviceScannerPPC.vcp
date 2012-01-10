@@ -1,0 +1,624 @@
+# Microsoft eMbedded Visual Tools Project File - Name="DeviceScannerPPC" - Package Owner=<4>
+# Microsoft eMbedded Visual Tools Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE x86) Application" 0x8301
+# TARGTYPE "Win32 (WCE ARM) Application" 0x8501
+
+CFG=DeviceScannerPPC - Win32 (WCE ARM) Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "DeviceScannerPPC.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "DeviceScannerPPC.vcn" CFG="DeviceScannerPPC - Win32 (WCE ARM) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "DeviceScannerPPC - Win32 (WCE ARM) Release" (based on "Win32 (WCE ARM) Application")
+!MESSAGE "DeviceScannerPPC - Win32 (WCE ARM) Debug" (based on "Win32 (WCE ARM) Application")
+!MESSAGE "DeviceScannerPPC - Win32 (WCE x86) Release" (based on "Win32 (WCE x86) Application")
+!MESSAGE "DeviceScannerPPC - Win32 (WCE x86) Debug" (based on "Win32 (WCE x86) Application")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+# PROP ATL_Project 2
+
+!IF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Release"
+
+# PROP BASE Use_MFC 2
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMRel"
+# PROP BASE Intermediate_Dir "ARMRel"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 2
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMRel"
+# PROP Intermediate_Dir "ARMRel"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "_AFXDLL" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "_AFXDLL" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_AFXDLL" /Yu"stdafx.h" /Oxs /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_AFXDLL" /D "MICROSTACK_NO_STDAFX" /Oxs /M$(CECrtMT) /c
+# SUBTRACT CPP /YX /Yc /Yu
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Debug"
+
+# PROP BASE Use_MFC 2
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMDbg"
+# PROP BASE Intermediate_Dir "ARMDbg"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 2
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMDbg"
+# PROP Intermediate_Dir "ARMDbg"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "_AFXDLL" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "_AFXDLL" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_AFXDLL" /Yu"stdafx.h" /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_AFXDLL" /D "MICROSTACK_NO_STDAFX" /FR /M$(CECrtMTDebug) /c
+# SUBTRACT CPP /YX /Yc /Yu
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /debug /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /debug /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Release"
+
+# PROP BASE Use_MFC 2
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "X86Rel"
+# PROP BASE Intermediate_Dir "X86Rel"
+# PROP BASE CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 2
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "X86Rel"
+# PROP Intermediate_Dir "X86Rel"
+# PROP CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /d "_AFXDLL" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /d "_AFXDLL" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /D "_WIN32_WCE_CEPC" /D "_AFXDLL" /Yu"stdafx.h" /Gs8192 /GF /Oxs /c
+# ADD CPP /nologo /W3 /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /D "_WIN32_WCE_CEPC" /D "_AFXDLL" /D "MICROSTACK_NO_STDAFX" /Gs8192 /GF /Oxs /c
+# SUBTRACT CPP /YX /Yc /Yu
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /subsystem:$(CESubsystem) /MACHINE:IX86
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /subsystem:$(CESubsystem) /MACHINE:IX86
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Debug"
+
+# PROP BASE Use_MFC 2
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "X86Dbg"
+# PROP BASE Intermediate_Dir "X86Dbg"
+# PROP BASE CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 2
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "X86Dbg"
+# PROP Intermediate_Dir "X86Dbg"
+# PROP CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /d "_AFXDLL" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /d "_AFXDLL" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "_WIN32_WCE_CEPC" /D "_AFXDLL" /Yu"stdafx.h" /Gs8192 /GF /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "_WIN32_WCE_CEPC" /D "_AFXDLL" /D "MICROSTACK_NO_STDAFX" /Gs8192 /GF /c
+# SUBTRACT CPP /YX /Yc /Yu
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /debug /subsystem:$(CESubsystem) /MACHINE:IX86
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /debug /subsystem:$(CESubsystem) /MACHINE:IX86
+
+!ENDIF 
+
+# Begin Target
+
+# Name "DeviceScannerPPC - Win32 (WCE ARM) Release"
+# Name "DeviceScannerPPC - Win32 (WCE ARM) Debug"
+# Name "DeviceScannerPPC - Win32 (WCE x86) Release"
+# Name "DeviceScannerPPC - Win32 (WCE x86) Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=.\DeviceScannerPPC.cpp
+
+!IF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Release"
+
+DEP_CPP_DEVIC=\
+	".\DeviceScannerPPC.h"\
+	".\DeviceScannerPPCDlg.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Debug"
+
+DEP_CPP_DEVIC=\
+	".\DeviceScannerPPC.h"\
+	".\DeviceScannerPPCDlg.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Release"
+
+DEP_CPP_DEVIC=\
+	".\DeviceScannerPPC.h"\
+	".\DeviceScannerPPCDlg.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Debug"
+
+DEP_CPP_DEVIC=\
+	".\DeviceScannerPPC.h"\
+	".\DeviceScannerPPCDlg.h"\
+	".\StdAfx.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\DeviceScannerPPC.rc
+
+!IF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Release"
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Debug"
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Release"
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\DeviceScannerPPCDlg.cpp
+
+!IF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Release"
+
+DEP_CPP_DEVICE=\
+	".\DeviceScannerPPC.h"\
+	".\DeviceScannerPPCDlg.h"\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	".\UPnPControlPoint.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Debug"
+
+DEP_CPP_DEVICE=\
+	".\DeviceScannerPPC.h"\
+	".\DeviceScannerPPCDlg.h"\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	".\UPnPControlPoint.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Release"
+
+DEP_CPP_DEVICE=\
+	".\DeviceScannerPPC.h"\
+	".\DeviceScannerPPCDlg.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Debug"
+
+DEP_CPP_DEVICE=\
+	".\DeviceScannerPPC.h"\
+	".\DeviceScannerPPCDlg.h"\
+	".\StdAfx.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\ILibHTTPClient.c
+
+!IF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Release"
+
+DEP_CPP_ILIBH=\
+	".\ILibHTTPClient.h"\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Debug"
+
+DEP_CPP_ILIBH=\
+	".\ILibHTTPClient.h"\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Release"
+
+DEP_CPP_ILIBH=\
+	".\ILibHTTPClient.h"\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Debug"
+
+DEP_CPP_ILIBH=\
+	".\ILibHTTPClient.h"\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\ILibMiniWebServer.c
+
+!IF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Release"
+
+DEP_CPP_ILIBM=\
+	".\ILibMiniWebServer.h"\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Debug"
+
+DEP_CPP_ILIBM=\
+	".\ILibMiniWebServer.h"\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Release"
+
+DEP_CPP_ILIBM=\
+	".\ILibMiniWebServer.h"\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Debug"
+
+DEP_CPP_ILIBM=\
+	".\ILibMiniWebServer.h"\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\ILibParsers.c
+
+!IF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Release"
+
+DEP_CPP_ILIBP=\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Debug"
+
+DEP_CPP_ILIBP=\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Release"
+
+DEP_CPP_ILIBP=\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Debug"
+
+DEP_CPP_ILIBP=\
+	".\ILibParsers.h"\
+	".\StdAfx.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\ILibSSDPClient.c
+
+!IF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Release"
+
+DEP_CPP_ILIBS=\
+	".\ILibParsers.h"\
+	".\ILibSSDPClient.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Debug"
+
+DEP_CPP_ILIBS=\
+	".\ILibParsers.h"\
+	".\ILibSSDPClient.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Release"
+
+DEP_CPP_ILIBS=\
+	".\ILibParsers.h"\
+	".\ILibSSDPClient.h"\
+	".\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Debug"
+
+DEP_CPP_ILIBS=\
+	".\ILibParsers.h"\
+	".\ILibSSDPClient.h"\
+	".\StdAfx.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\StdAfx.cpp
+
+!IF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Release"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Release"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Debug"
+
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\UPnPControlPoint.c
+
+!IF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Release"
+
+DEP_CPP_UPNPC=\
+	".\ILibHTTPClient.h"\
+	".\ILibMiniWebServer.h"\
+	".\ILibParsers.h"\
+	".\ILibSSDPClient.h"\
+	".\StdAfx.h"\
+	".\UPnPControlPoint.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE ARM) Debug"
+
+DEP_CPP_UPNPC=\
+	".\ILibHTTPClient.h"\
+	".\ILibMiniWebServer.h"\
+	".\ILibParsers.h"\
+	".\ILibSSDPClient.h"\
+	".\StdAfx.h"\
+	".\UPnPControlPoint.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Release"
+
+DEP_CPP_UPNPC=\
+	".\ILibHTTPClient.h"\
+	".\ILibMiniWebServer.h"\
+	".\ILibParsers.h"\
+	".\ILibSSDPClient.h"\
+	".\StdAfx.h"\
+	".\UPnPControlPoint.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DeviceScannerPPC - Win32 (WCE x86) Debug"
+
+DEP_CPP_UPNPC=\
+	".\ILibHTTPClient.h"\
+	".\ILibMiniWebServer.h"\
+	".\ILibParsers.h"\
+	".\ILibSSDPClient.h"\
+	".\StdAfx.h"\
+	".\UPnPControlPoint.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=.\DeviceScannerPPC.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\DeviceScannerPPCDlg.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ILibHTTPClient.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ILibMiniWebServer.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ILibParsers.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ILibSSDPClient.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\newres.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Resource.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\StdAfx.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\UPnPControlPoint.h
+# End Source File
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+# Begin Source File
+
+SOURCE=.\Media\Computer16.bmp
+# End Source File
+# Begin Source File
+
+SOURCE=.\Media\Device16.bmp
+# End Source File
+# Begin Source File
+
+SOURCE=.\res\DeviceScannerPPC.ico
+# End Source File
+# Begin Source File
+
+SOURCE=.\res\DeviceScannerPPC.rc2
+# PROP Exclude_From_Scan -1
+# PROP BASE Exclude_From_Build 1
+# PROP Exclude_From_Build 1
+# End Source File
+# Begin Source File
+
+SOURCE=".\Media\Folder16-1.bmp"
+# End Source File
+# Begin Source File
+
+SOURCE=".\Media\Folder16-2.bmp"
+# End Source File
+# Begin Source File
+
+SOURCE=.\Media\icon1.ico
+# End Source File
+# Begin Source File
+
+SOURCE=".\Media\Method16-3.bmp"
+# End Source File
+# Begin Source File
+
+SOURCE=".\Media\Service16-2.bmp"
+# End Source File
+# Begin Source File
+
+SOURCE=".\Media\Service16-3.bmp"
+# End Source File
+# Begin Source File
+
+SOURCE=".\Media\UPnP-Spy.ico"
+# End Source File
+# Begin Source File
+
+SOURCE=".\Media\Variable16-2.bmp"
+# End Source File
+# End Group
+# Begin Source File
+
+SOURCE=.\ReadMe.txt
+# End Source File
+# Begin Source File
+
+SOURCE="..\..\..\..\..\..\Program Files\Windows CE Tools\wce300\Pocket PC 2002\lib\arm\winsock.lib"
+# End Source File
+# Begin Source File
+
+SOURCE="..\..\..\..\..\..\Program Files\Windows CE Tools\wce300\Pocket PC 2002\lib\arm\aygshell.lib"
+# End Source File
+# End Target
+# End Project

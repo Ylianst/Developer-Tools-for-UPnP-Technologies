@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'IntelMediaServerService'
+		'IntelMediaServerService.EXE'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

@@ -1,0 +1,37 @@
+// using relative paths for sourcepath and user includes
+
+TARGET          UPnPSample.exe
+TARGETTYPE      exe
+TARGETPATH	    \sys\bin
+UID             0x100039CE 0x2000520E
+VENDORID        0x7000000f
+CAPABILITY      ALL -TCB
+
+OPTION          ARMCC --diag_suppress 68,111,177,188,223,427,513,550,1295
+
+SOURCEPATH      .
+USERINCLUDE     .                        
+SOURCE          ILibChainAdaptor.cpp
+SOURCE          ILibChainEngine.cpp
+SOURCE          ILibAsyncServerSocket.c
+SOURCE          ILibAsyncSocket.c
+SOURCE          ILibAsyncUDPSocket.c
+SOURCE          ILibParsers.c
+SOURCE          ILibWebClient.c
+SOURCE          ILibWebServer.c//{{{BEGIN_THREADPOOL}}}
+SOURCE			ILibThreadPool.c//{{{END_THREADPOOL}}}
+SOURCE          ILibSocketWrapper.cpp
+SOURCE          ILibSymbianSemaphore.cpp
+SOURCE			Sample.cpp
+//{{{BeginSource}}}SOURCE          {{{SOURCE}}}
+//{{{EndSource}}}
+
+SYSTEMINCLUDE   \Epoc32\include
+SYSTEMINCLUDE   \Epoc32\include\libc
+
+LIBRARY         euser.lib
+LIBRARY         esock.lib
+LIBRARY         insock.lib
+LIBRARY         commdb.lib
+LIBRARY         biut.lib
+LIBRARY         estlib.lib

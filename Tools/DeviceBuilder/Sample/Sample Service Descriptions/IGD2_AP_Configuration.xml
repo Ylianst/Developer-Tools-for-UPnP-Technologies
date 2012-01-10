@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<scpd xmlns="urn:schemas-upnp-org:service-1-0">
+	<specVersion>
+		<major>1</major>
+		<minor>0</minor>
+	</specVersion>
+	<actionList>
+		<action>
+			<name>GetSSID</name>
+			<argumentList>
+				<argument>
+					<name>SSID</name>
+					<direction>out</direction>
+					<relatedStateVariable>SSID</relatedStateVariable>
+				</argument>
+			</argumentList>
+		</action>
+		<action>
+			<name>SetSSID</name>
+			<argumentList>
+				<argument>
+					<name>SSID</name>
+					<direction>in</direction>
+					<relatedStateVariable>SSID</relatedStateVariable>
+				</argument>
+				<argument>
+					<name>SSID</name>
+					<direction>out</direction>
+					<relatedStateVariable>SSID</relatedStateVariable>
+				</argument>
+			</argumentList>
+		</action>
+	</actionList>
+	<serviceStateTable>
+		<stateVariable sendEvents="no">
+			<name>SSID</name>
+			<dataType>string</dataType>
+			<defaultValue>UPnP_Sample_AP</defaultValue>
+		</stateVariable>
+	</serviceStateTable>
+</scpd>
+
+
+
+

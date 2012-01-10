@@ -1,0 +1,894 @@
+# Microsoft eMbedded Visual Tools Project File - Name="PPC Media Server" - Package Owner=<4>
+# Microsoft eMbedded Visual Tools Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE x86) Application" 0x8301
+# TARGTYPE "Win32 (WCE ARM) Application" 0x8501
+
+CFG=PPC Media Server - Win32 (WCE ARM) Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "PPC Media Server.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "PPC Media Server.vcn" CFG="PPC Media Server - Win32 (WCE ARM) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "PPC Media Server - Win32 (WCE ARM) Release" (based on "Win32 (WCE ARM) Application")
+!MESSAGE "PPC Media Server - Win32 (WCE ARM) Debug" (based on "Win32 (WCE ARM) Application")
+!MESSAGE "PPC Media Server - Win32 (WCE x86) Release" (based on "Win32 (WCE x86) Application")
+!MESSAGE "PPC Media Server - Win32 (WCE x86) Debug" (based on "Win32 (WCE x86) Application")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+# PROP ATL_Project 2
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMRel"
+# PROP BASE Intermediate_Dir "ARMRel"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMRel"
+# PROP Intermediate_Dir "ARMRel"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /Yu"stdafx.h" /Oxs /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /I "..\\" /I "..\DeviceBuilder\PocketPC" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /Oxs /M$(CECrtMT) /c
+# SUBTRACT CPP /YX /Yc /Yu
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /out:"ARMRel/Media Server.exe" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMDbg"
+# PROP BASE Intermediate_Dir "ARMDbg"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMDbg"
+# PROP Intermediate_Dir "ARMDbg"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /Yu"stdafx.h" /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /I "..\\" /I "..\DeviceBuilder\PocketPC" /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /FR /M$(CECrtMTDebug) /c
+# SUBTRACT CPP /YX /Yc /Yu
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /out:"ARMDbg/Media Server.exe" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "X86Rel"
+# PROP BASE Intermediate_Dir "X86Rel"
+# PROP BASE CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "X86Rel"
+# PROP Intermediate_Dir "X86Rel"
+# PROP CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "_i386_" /D UNDER_CE=$(CEVersion) /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /Yu"stdafx.h" /Gs8192 /GF /Oxs /c
+# ADD CPP /nologo /W3 /I "..\\" /I "..\DeviceBuilder\PocketPC" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "_i386_" /D UNDER_CE=$(CEVersion) /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /Gs8192 /GF /Oxs /c
+# SUBTRACT CPP /YX /Yc /Yu
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
+# ADD LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /out:"X86Rel/Media Server.exe" /subsystem:$(CESubsystem) /MACHINE:IX86
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "X86Dbg"
+# PROP BASE Intermediate_Dir "X86Dbg"
+# PROP BASE CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "X86Dbg"
+# PROP Intermediate_Dir "X86Dbg"
+# PROP CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /Yu"stdafx.h" /Gs8192 /GF /c
+# ADD CPP /nologo /W3 /Zi /Od /I "..\\" /I "..\DeviceBuilder\PocketPC" /D "DEBUG" /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /Gs8192 /GF /c
+# SUBTRACT CPP /YX /Yc /Yu
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
+# ADD LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /out:"X86Dbg/Media Server.exe" /subsystem:$(CESubsystem) /MACHINE:IX86
+
+!ENDIF 
+
+# Begin Target
+
+# Name "PPC Media Server - Win32 (WCE ARM) Release"
+# Name "PPC Media Server - Win32 (WCE ARM) Debug"
+# Name "PPC Media Server - Win32 (WCE x86) Release"
+# Name "PPC Media Server - Win32 (WCE x86) Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=..\CdsMediaClass.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_CDSME=\
+	"..\CdsMediaClass.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_CDSME=\
+	"..\CdsMediaClass.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_CDSME=\
+	"..\CdsMediaClass.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_CDSME=\
+	"..\CdsMediaClass.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\CdsMediaObject.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_CDSMED=\
+	"..\CdsMediaClass.h"\
+	"..\CdsMediaObject.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_CDSMED=\
+	"..\CdsMediaClass.h"\
+	"..\CdsMediaObject.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_CDSMED=\
+	"..\CdsMediaClass.h"\
+	"..\CdsMediaObject.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_CDSMED=\
+	"..\CdsMediaClass.h"\
+	"..\CdsMediaObject.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\CdsObjectToDidl.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_CDSOB=\
+	"..\CdsMediaClass.h"\
+	"..\CdsMediaObject.h"\
+	"..\CdsObjectToDidl.h"\
+	"..\CdsStrings.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_CDSOB=\
+	"..\CdsMediaClass.h"\
+	"..\CdsMediaObject.h"\
+	"..\CdsObjectToDidl.h"\
+	"..\CdsStrings.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_CDSOB=\
+	"..\CdsMediaClass.h"\
+	"..\CdsMediaObject.h"\
+	"..\CdsObjectToDidl.h"\
+	"..\CdsStrings.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_CDSOB=\
+	"..\CdsMediaClass.h"\
+	"..\CdsMediaObject.h"\
+	"..\CdsObjectToDidl.h"\
+	"..\CdsStrings.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_ILIBA=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_ILIBA=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_ILIBA=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_ILIBA=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibAsyncSocket.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_ILIBAS=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_ILIBAS=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_ILIBAS=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_ILIBAS=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibParsers.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_ILIBP=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_ILIBP=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_ILIBP=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_ILIBP=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibWebClient.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_ILIBW=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_ILIBW=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_ILIBW=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_ILIBW=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibWebServer.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_ILIBWE=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebServer.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_ILIBWE=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebServer.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_ILIBWE=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebServer.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_ILIBWE=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebServer.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\MicroMediaServer.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_MICRO=\
+	"..\CdsMediaClass.h"\
+	"..\CdsMediaObject.h"\
+	"..\CdsObjectToDidl.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebServer.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	"..\MicroMediaServer.h"\
+	"..\MimeTypes.h"\
+	"..\mystring.h"\
+	"..\PortingFunctions.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_MICRO=\
+	"..\CdsMediaClass.h"\
+	"..\CdsMediaObject.h"\
+	"..\CdsObjectToDidl.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	"..\MicroMediaServer.h"\
+	"..\MimeTypes.h"\
+	"..\mystring.h"\
+	"..\PortingFunctions.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_MICRO=\
+	"..\MicroMediaServer.h"\
+	"..\MimeTypes.h"\
+	"..\mystring.h"\
+	"..\PortingFunctions.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_MICRO=\
+	"..\MicroMediaServer.h"\
+	"..\MimeTypes.h"\
+	"..\mystring.h"\
+	"..\PortingFunctions.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\MimeTypes.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_MIMET=\
+	"..\CdsMediaClass.h"\
+	"..\MimeTypes.h"\
+	"..\mystring.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_MIMET=\
+	"..\CdsMediaClass.h"\
+	"..\MimeTypes.h"\
+	"..\mystring.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_MIMET=\
+	"..\MimeTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_MIMET=\
+	"..\MimeTypes.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\mystring.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_MYSTR=\
+	"..\mystring.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_MYSTR=\
+	"..\mystring.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_MYSTR=\
+	"..\mystring.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_MYSTR=\
+	"..\mystring.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\PortingFunctions.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_PORTI=\
+	"..\MicroMediaServer.h"\
+	"..\mystring.h"\
+	"..\PortingFunctions.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_PORTI=\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	"..\MicroMediaServer.h"\
+	"..\mystring.h"\
+	"..\PortingFunctions.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_PORTI=\
+	"..\MicroMediaServer.h"\
+	"..\mystring.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_PORTI=\
+	"..\MicroMediaServer.h"\
+	"..\mystring.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=".\PPC Media Server.cpp"
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_PPC_M=\
+	"..\CdsMediaClass.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	"..\MicroMediaServer.h"\
+	"..\MimeTypes.h"\
+	"..\mystring.h"\
+	".\PPC Media Server.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_PPC_M=\
+	"..\CdsMediaClass.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	"..\MicroMediaServer.h"\
+	"..\MimeTypes.h"\
+	"..\mystring.h"\
+	".\PPC Media Server.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_PPC_M=\
+	".\ipapi.h"\
+	".\ygshell.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_PPC_M=\
+	".\PPC Media Server.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_PPC_M=\
+	".\ipapi.h"\
+	".\ygshell.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_PPC_M=\
+	".\PPC Media Server.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_PPC_M=\
+	".\ipapi.h"\
+	".\UPnPMicroStack.h"\
+	".\ygshell.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=".\PPC Media Server.rc"
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\UpnpMicroStack.c
+
+!IF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Release"
+
+DEP_CPP_UPNPM=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebServer.h"\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE ARM) Debug"
+
+DEP_CPP_UPNPM=\
+	"..\DeviceBuilder\PocketPC\ILibHTTPClient.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Release"
+
+DEP_CPP_UPNPM=\
+	"..\DeviceBuilder\PocketPC\ILibHTTPClient.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	
+
+!ELSEIF  "$(CFG)" == "PPC Media Server - Win32 (WCE x86) Debug"
+
+DEP_CPP_UPNPM=\
+	"..\DeviceBuilder\PocketPC\ILibHTTPClient.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=..\CdsErrors.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CdsMediaClass.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CdsMediaObject.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CdsObjectToDidl.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CdsStrings.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibAsyncSocket.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibParsers.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibWebClient.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibWebServer.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\MicroMediaServer.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\MimeTypes.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\mystring.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\newres.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\PortingFunctions.h
+# End Source File
+# Begin Source File
+
+SOURCE=".\PPC Media Server.h"
+# End Source File
+# Begin Source File
+
+SOURCE=.\resource.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\stdafx.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\UpnpMicroStack.h
+# End Source File
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+# Begin Source File
+
+SOURCE=..\Media\ArrowIconLeft.ico
+# End Source File
+# Begin Source File
+
+SOURCE=..\Media\ArrowIconRight.ico
+# End Source File
+# Begin Source File
+
+SOURCE=.\icon1.ico
+# End Source File
+# Begin Source File
+
+SOURCE=.\MediaServer.ico
+# End Source File
+# Begin Source File
+
+SOURCE=..\Media\MediaServer16.ico
+# End Source File
+# Begin Source File
+
+SOURCE=..\Media\MediaServer32.ico
+# End Source File
+# Begin Source File
+
+SOURCE=".\PPC Media Server.ico"
+# End Source File
+# Begin Source File
+
+SOURCE=.\UPnPMediaServer.ico
+# End Source File
+# End Group
+# Begin Source File
+
+SOURCE=.\ReadMe.txt
+# End Source File
+# Begin Source File
+
+SOURCE=.\winsock_x86.lib
+# End Source File
+# Begin Source File
+
+SOURCE=.\winsock_arm.lib
+# End Source File
+# End Target
+# End Project

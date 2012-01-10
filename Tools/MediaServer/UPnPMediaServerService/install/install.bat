@@ -1,0 +1,2 @@
+@installutil UPnPMediaServerService.exe
+@pause

@@ -1,0 +1,51 @@
+// IntelMediaServerService.idl : IDL source for IntelMediaServerService
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (IntelMediaServerService.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(C86E5F5A-876F-44EB-87EF-8246CECF2D4D),
+	dual,
+	nonextensible,
+	helpstring("IIntelMediaServerConfig Interface"),
+	pointer_default(unique)
+]
+interface IIntelMediaServerConfig : IDispatch{
+	[id(1), helpstring("method GetVersionInfo")] HRESULT GetVersionInfo([out,retval] BSTR* info);
+	[id(2), helpstring("method GetSharedFolders")] HRESULT GetSharedFolders([out,retval] BSTR* Folders);
+	[id(3), helpstring("method AddSharedFolder")] HRESULT AddSharedFolder([in] BSTR Folder);
+	[id(4), helpstring("method RemoveSharedFolder")] HRESULT RemoveSharedFolder([in] BSTR Folder);
+};
+[
+	uuid(D4AC20C2-5187-4CC3-A907-313F18E17019),
+	version(1.0),
+	helpstring("IntelMediaServerService 1.0 Type Library")
+]
+library IntelMediaServerServiceLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(57C98A04-E827-4BCD-B288-0DA049AF1258),
+		helpstring("_IIntelMediaServerConfigEvents Interface")
+	]
+	dispinterface _IIntelMediaServerConfigEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method ServerLogEvent")] HRESULT ServerLogEvent([in] BSTR msg);
+	};
+	[
+		uuid(8A879A58-EE07-4F3D-B92D-3BE14C9C541A),
+		helpstring("IntelMediaServerConfig Class")
+	]
+	coclass IntelMediaServerConfig
+	{
+		[default] interface IIntelMediaServerConfig;
+		[default, source] dispinterface _IIntelMediaServerConfigEvents;
+	};
+};

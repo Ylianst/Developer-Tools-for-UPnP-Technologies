@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scpd xmlns:ct1="http://www.vendor.org/schemas" ct1:schemaLocation="http://www.vendor.org/Schemas/Sample.xsd" xmlns="urn:schemas-upnp-org:service-1-0">
+   <specVersion>
+      <major>1</major>
+      <minor>1</minor>
+   </specVersion>
+   <actionList>
+      <action>
+         <name>GetCapabilities</name>
+         <argumentList>
+            <argument>
+               <name>Capability</name>
+               <direction>out</direction>
+               <relatedStateVariable>CapabilityResult</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      <action>
+         <name>GetEnhancedStatus</name>
+         <argumentList>
+            <argument>
+               <name>ResultStatus</name>
+               <direction>out</direction>
+               <relatedStateVariable>Status</relatedStateVariable>
+            </argument>
+            <argument>
+               <name>ResultStatusInfo</name>
+               <direction>out</direction>
+               <relatedStateVariable>TargetInfo</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      <action>
+         <name>GetStatusList</name>
+         <argumentList>
+            <argument>
+               <name>ResultStatus</name>
+               <direction>out</direction>
+               <relatedStateVariable>Status</relatedStateVariable>
+            </argument>
+            <argument>
+               <name>ResultStatusInfo</name>
+               <direction>out</direction>
+               <relatedStateVariable>TargetInfo</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      <action>
+         <name>GetStatusSchedule</name>
+         <argumentList>
+            <argument>
+               <name>ResultStatus</name>
+               <direction>out</direction>
+               <relatedStateVariable>ScheduleList</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      <action>
+         <name>SetEnhancedTarget</name>
+         <argumentList>
+            <argument>
+               <name>newTargetValue</name>
+               <direction>in</direction>
+               <relatedStateVariable>Target</relatedStateVariable>
+            </argument>
+            <argument>
+               <name>newTargetInfo</name>
+               <direction>in</direction>
+               <relatedStateVariable>TargetInfo</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      <action>
+         <name>SetTarget</name>
+         <argumentList>
+            <argument>
+               <name>newTargetValue</name>
+               <direction>in</direction>
+               <relatedStateVariable>Target</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      <action>
+         <name>SetTargetSchedule</name>
+         <argumentList>
+            <argument>
+               <name>newTargetList</name>
+               <direction>in</direction>
+               <relatedStateVariable>ScheduleList</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+   </actionList>
+   <serviceStateTable>
+      <stateVariable sendEvents="yes">
+         <name>Status</name>
+         <dataType>boolean</dataType>
+      </stateVariable>
+      <stateVariable sendEvents="no">
+         <name>TargetInfo</name>
+         <dataType type="ct1:TargetInfo">string</dataType>
+      </stateVariable>
+      <stateVariable sendEvents="no">
+         <name>CapabilityResult</name>
+         <dataType>string</dataType>
+      </stateVariable>
+      <stateVariable sendEvents="no">
+         <name>ScheduleList</name>
+         <dataType type="ct1:ScheduleList">string</dataType>
+      </stateVariable>
+      <stateVariable sendEvents="no">
+         <name>Target</name>
+         <dataType>boolean</dataType>
+      </stateVariable>
+   </serviceStateTable>
+</scpd>

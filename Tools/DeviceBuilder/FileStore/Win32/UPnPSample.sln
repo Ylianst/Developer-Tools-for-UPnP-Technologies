@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UPnPSample", "UPnPSample.vcproj", "{9166753F-287E-40C9-9CEE-1FE0040D930C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9166753F-287E-40C9-9CEE-1FE0040D930C}.Debug|Default.ActiveCfg = Debug|Win32
+		{9166753F-287E-40C9-9CEE-1FE0040D930C}.Debug|Default.Build.0 = Debug|Win32
+		{9166753F-287E-40C9-9CEE-1FE0040D930C}.Release|Default.ActiveCfg = Release|Win32
+		{9166753F-287E-40C9-9CEE-1FE0040D930C}.Release|Default.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

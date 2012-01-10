@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+            Microsoft ResX Schema 
+        
+            Version 1.3
+                
+            The primary goals of this format is to allow a simple XML format 
+            that is mostly human readable. The generation and parsing of the 
+            various data types are done through the TypeConverter classes 
+            associated with the data types.
+        
+            Example:
+        
+                ... ado.net/XML headers & schema ...
+                <resheader name="resmimetype">text/microsoft-resx</resheader>
+                <resheader name="version">1.3</resheader>
+                <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+                <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+                <data name="Name1">this is my long string</data>
+                <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+                <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+                    [base64 mime encoded serialized .NET Framework object]
+                </data>
+                <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+                    [base64 mime encoded string representing a byte array form of the .NET Framework object]
+                </data>
+        
+            There are any number of "resheader" rows that contain simple 
+            name/value pairs.
+            
+            Each data row contains a name, and value. The row also contains a 
+            type or mimetype. Type corresponds to a .NET class that support 
+            text/value conversion through the TypeConverter architecture. 
+            Classes that don't support this are serialized and stored with the 
+            mimetype set.
+                     
+            The mimetype is used for serialized objects, and tells the 
+            ResXResourceReader how to depersist the object. This is currently not 
+            extensible. For a given mimetype the value must be set accordingly:
+        
+            Note - application/x-microsoft.net.object.binary.base64 is the format 
+                   that the ResXResourceWriter will generate, however the reader can 
+                   read any of the formats listed below.
+        
+            mimetype: application/x-microsoft.net.object.binary.base64
+            value   : The object must be serialized with 
+                    : System.Serialization.Formatters.Binary.BinaryFormatter
+                    : and then encoded with base64 encoding.
+        
+            mimetype: application/x-microsoft.net.object.soap.base64
+            value   : The object must be serialized with 
+                    : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+                    : and then encoded with base64 encoding.
+            mimetype: application/x-microsoft.net.object.bytearray.base64
+            value   : The object must be serialized into a byte array 
+                    : using a System.ComponentModel.TypeConverter
+                    : and then encoded with base64 encoding.
+        -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cancelButton.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;okButton.Parent">
+    <value>$this</value>
+  </data>
+  <data name="okButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="$this.Name">
+    <value>UPnPServiceLocator</value>
+  </data>
+  <data name="$this.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="deviceTree.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="okButton.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>152, 320</value>
+  </data>
+  <data name="$this.AutoScrollMargin" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Name">
+    <value>cancelButton</value>
+  </data>
+  <data name="$this.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>French</value>
+  </data>
+  <data name="deviceTree.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="$this.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;imageList.Name">
+    <value>imageList</value>
+  </data>
+  <data name="imageList.ImageSize" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>16, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>360, 350</value>
+  </data>
+  <data name="okButton.ImageIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>-1</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;okButton.ZOrder">
+    <value>2</value>
+  </data>
+  <data name="label1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>344, 32</value>
+  </data>
+  <data name="deviceTree.SelectedImageIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>0</value>
+  </data>
+  <data name="cancelButton.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="$this.Text">
+    <value>Service Locator</value>
+  </data>
+  <data name="label1.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;label1.ZOrder">
+    <value>0</value>
+  </data>
+  <data name="imageList.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </data>
+  <data name="label1.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>3</value>
+  </data>
+  <data name="okButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAICAAAAAAAACoCAAAJgAAABAQAAAAAAAAaAUAAM4IAAAoAAAAIAAAAEAAAAABAAgAAAAAAAAE
+        AAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAMDAwADA3MAA8MqmAAQE
+        BAAICAgADAwMABEREQAWFhYAHBwcACIiIgApKSkAVVVVAE1NTQBCQkIAOTk5AIB8/wBQUP8AkwDWAP/s
+        zADG1u8A1ufnAJCprQAAADMAAABmAAAAmQAAAMwAADMAAAAzMwAAM2YAADOZAAAzzAAAM/8AAGYAAABm
+        MwAAZmYAAGaZAABmzAAAZv8AAJkAAACZMwAAmWYAAJmZAACZzAAAmf8AAMwAAADMMwAAzGYAAMyZAADM
+        zAAAzP8AAP9mAAD/mQAA/8wAMwAAADMAMwAzAGYAMwCZADMAzAAzAP8AMzMAADMzMwAzM2YAMzOZADMz
+        zAAzM/8AM2YAADNmMwAzZmYAM2aZADNmzAAzZv8AM5kAADOZMwAzmWYAM5mZADOZzAAzmf8AM8wAADPM
+        MwAzzGYAM8yZADPMzAAzzP8AM/8zADP/ZgAz/5kAM//MADP//wBmAAAAZgAzAGYAZgBmAJkAZgDMAGYA
+        /wBmMwAAZjMzAGYzZgBmM5kAZjPMAGYz/wBmZgAAZmYzAGZmZgBmZpkAZmbMAGaZAABmmTMAZplmAGaZ
+        mQBmmcwAZpn/AGbMAABmzDMAZsyZAGbMzABmzP8AZv8AAGb/MwBm/5kAZv/MAMwA/wD/AMwAmZkAAJkz
+        mQCZAJkAmQDMAJkAAACZMzMAmQBmAJkzzACZAP8AmWYAAJlmMwCZM2YAmWaZAJlmzACZM/8AmZkzAJmZ
+        ZgCZmZkAmZnMAJmZ/wCZzAAAmcwzAGbMZgCZzJkAmczMAJnM/wCZ/wAAmf8zAJnMZgCZ/5kAmf/MAJn/
+        /wDMAAAAmQAzAMwAZgDMAJkAzADMAJkzAADMMzMAzDNmAMwzmQDMM8wAzDP/AMxmAADMZjMAmWZmAMxm
+        mQDMZswAmWb/AMyZAADMmTMAzJlmAMyZmQDMmcwAzJn/AMzMAADMzDMAzMxmAMzMmQDMzMwAzMz/AMz/
+        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
+        /wAA/2YAAP+ZAAD/zAAzAAAAMwAzADMAZgAzAJkAMwDMADMA/wAzMwAAMzMzADMzZgAzM5kAMzPMADMz
+        /wAzZgAAM2YzADNmZgAzZpkAM2bMADNm/wAzmQAAM5kzADOZZgAzmZkAM5nMADOZ/wAzzAAAM8wzADPM
+        ZgAzzJkAM8zMADPM/wAz/zMAM/9mADP/mQAz/8wAM///AGYAAABmADMAZgBmAGYAmQBmAMwAZgD/AGYz
+        AABmMzMAZjNmAGYzmQBmM8wAZjP/AGZmAABmZjMAZmZmAGZmmQBmZswAZpkAAGaZMwBmmWYAZpmZAGaZ
+        zABmmf8AZswAAGbMMwBmzJkAZszMAGbM/wBm/wAAZv8zAGb/mQBm/8wAzAD/AP8AzACZmQAAmTOZAJkA
+        mQCZAMwAmQAAAJkzMwCZAGYAmTPMAJkA/wCZZgAAmWYzAJkzZgCZZpkAmWbMAJkz/wCZmTMAmZlmAJmZ
+        mQCZmcwAmZn/AJnMAACZzDMAZsxmAJnMmQCZzMwAmcz/AJn/AACZ/zMAmcxmAJn/mQCZ/8wAmf//AMwA
+        AACZADMAzABmAMwAmQDMAMwAmTMAAMwzMwDMM2YAzDOZAMwzzADMM/8AzGYAAMxmMwCZZmYAzGaZAMxm
+        zACZZv8AzJkAAMyZMwDMmWYAzJmZAMyZzADMmf8AzMwAAMzMMwDMzGYAzMyZAMzMzADMzP8AzP8AAMz/
+        MwCZ/2YAzP+ZAMz/zADM//8AzAAzAP8AZgD/AJkAzDMAAP8zMwD/M2YA/zOZAP8zzAD/M/8A/2YAAP9m
+        MwDMZmYA/2aZAP9mzADMZv8A/5kAAP+ZMwD/mWYA/5mZAP+ZzAD/mf8A/8wAAP/MMwD/zGYA/8yZAP/M
+        zAD/zP8A//8zAMz/ZgD//5kA///MAGZm/wBm/2YAZv//AP9mZgD/Zv8A//9mACEApQBfX18Ad3d3AIaG
+        hgCWlpYAy8vLALKysgDX19cA3d3dAOPj4wDq6uoA8fHxAPj4+ADw+/8ApKCgAICAgAAAAP8AAP8AAAD/
+        /wD/AAAA/wD/AP//AAD///8AAOzrAAAAAAoKCgoKCgoKCgCmZWZmbQAAAAAKCgoKCgoAprS1rYZlZhLs
+        AAoKCgoK76YJGRkJ3LStZeoACgoKCu+mCRkZGRnc260SAAoKCgrvigkZGRkZ29ut6gAKCgoKtazdGRkZ
+        GZGRrWYAAAoKCrWtGRkZGRnvtNy0i64AAAq0rfP0GRkZGQmztNy060QAtK30//QZGRkZi20Ju28l77St
+        9P/09BkZGYvrCgq8kwq0rf//////9BmL6woKCgoKtKyttLvd8//0i+sKCgoKCrStrKysrKyttIrsCgoK
+        CgoAu7W0tLOtrKyK7AoKCgoKCgoKAAAAAAC1kQAKCgoKCp//AACD/wAAgD8AAAAfAAAAHwAAAB8AAAAf
+        AAAABwAAAAEAAAAAAAAAGQAAAB8AAAAfAAAAHwAAgB8AAP8/AAA=
+</value>
+  </data>
+  <data name="$this.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="cancelButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="cancelButton.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="imageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFpTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0xLjAuMzMw
+        MC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZT
+        eXN0ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMA
+        AACEDAAAAk1TRnQBSQFMAgEBAwEAAQQBAAEEAQABEAEAARABAAT/AREBEAj/AUIBTQE2BwABNgMAASgD
+        AAFAAwABEAMAAQEBAAEQBgABCBIAAf8BfwH/AX8BnQFzAToBZwHZAV4B2AFaAbgBWgH5AWIBfAFzAf8B
+        fwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8B
+        fwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/gF/ARIBPgGNAjEBRgHWAloBbwG9AXcB/wF/Af8B
+        fwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8gAAH/AX8BGgFjAVUBSgGXAVIB2QFaAdkBWgF4AU4B
+        9AFBAXABNQG3AVoB/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B
+        /wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/AZsBcwFUAQ0B8wEEAa4BBAGpAQwB
+        CQEdAa0BNQFzAVIBOQFrAb0BdwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfyAAAVwBawEaAWMBnAFzAZwB
+        cwF7AW8B+gFeAZcBUgFWAUoBeAFOAdMBPQE6AWcB/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8B
+        fwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8BegFzAVQB
+        DQF6Aj4BVwGbAT4B9wEpAVIBGQEOARUBDAEZAY0BLQFzAU4B3gF7Af8BfwH/AX8B/wF/Af8BfyAAAdkB
+        WgG9AXcB3gF7Ab0BdwGcAXMB+gFeAZcBUgE1AUYBeAFOATcBRgHYAV4BOwFrATQBSgH4AV4B/wF/Af8B
+        fwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8BnAFzARgBYwFaAWsBvQF3Af8BfwH/AX8B/wF/Af8B
+        fwH/AX8BWQFrAVQBDQG7AUYBnwFnAZ8BYwGfAWMBfwFfAT8BTwF9AS4BVAERASkBIQF7AW8B/wF/Af8B
+        fwH/AX8B/wF/IAABfQFvAZ0BcwGeAXMBnQFzAZwBcwG5AVYBFwFCAfcBPQGZAVIBNgFGAVYBTgGYAVIB
+        dQFOAfMBQQETAUYB+QFiAf8BfwH/AX8B/wF/Af8BfwG9AXcB9wFeAXMBTgHOATkBjAExAa0BNQHvAT0B
+        UgFKARgBYwG9AXcB/wF/Af8BfwFaAWsBVQENAfwBUgG/AWsBnwFjAZ8BYwF/Al8BTwEfATMB+AEhASsB
+        JQGcAXMB/wF/Af8BfwH/AX8B/wF/IAAB/wF/AX0BbwFZAUYBuwFWAZkBUgE5AUYBuAE1AbkBNQG6AVYB
+        +wFeARsBYwHaAVoBVQFKAZYBUgF1AU4BsQE5Af8BfwH/AX8BvQF3AdYBWgGtATUBtQFWATkBZwHvAT0B
+        xgEYAecBHAFKASkBzgE5AYwBMQHvAT0BOQFnAf8BfwE5AWcBdQENAV0BXwHfAW8BnwFjAZ8BYwGfAWMD
+        PwFHARcBKgFKASkBnAFzAf8BfwH/AX8B/wF/Af8BfyAAAf8BfwF9AXMBWwEyAb8BGgHeATIBnAE+AfoB
+        OQG4ATUB+wFeAfsBXgG6AVYBmgFSARUBQgH0AT0BdAFGARIBQgG9AXcBtQFWAZQBUgGUAVIB1gFaAXMB
+        TgFSAUoBEAFCAQgBIQHnARwBpQEUAcYBGAEIASEBjAExAc4BOQHWAVoB9wFaAXYBEQF+AWcB3gFzAd8B
+        cwGfAWMBvQFvAXQBQgFSAToBWwEqAZEBGQESAToB1gFaAZwBcwH/AX8B/wF/IAAB/wF/AX0BbwF8ASoB
+        3wEaAd8BGgHfARoB/wEmAb0BNgE5AUIBegFOAfsBXgHaAVoBNgFGARYBQgH0AT0BsgE5AXMBTgEYAWMB
+        cwFOAVIBSgGUAVIBtQFWARgBYwE5AWcB1gFaAXMBTgFzAU4BjAExAcYBGAGlARQBjAExAXMBTgHXAVYB
+        lgERAb8BcwG9AXMBvgFvAd8BbwHfAXMBnwFnAZsBNgE+AU8BnwFfAZwBLgGUAREBjgEpAZQBTgGcAXMg
+        AAH/AX8BGwFjAd4BJgH/ASYBHwErAR8BKwEfAScBHwEnAf8BJgF8AS4B2gFeAdoBWgEWAUIBWAFKAVgB
+        SgHTAT0BMQFGAZQBUgHWAVoBGAFjAXsBbwGcAXMBnAFzAZwBcwF7AW8BewFvAVoBawE5AWcB9wFeAVIB
+        SgHOATkBcwFOAbYBUgG4ARUB3wF7Af8BewHfAXcB3wFzAd8BcwHfAW8BvwFrAfcBIQH0ASkBHQFLAbsB
+        PgEQAU4BogFMAbUBYiAAAf8BfwH6AVoBHwErAT8BMwE/ATcBPwE3AT8BNwE/ATMBHwEvAZ0BMgHaAV4B
+        2gFaAfYBPQH1AT0B9QE9AdMBOQFzAU4BewFvAd4BewH/AX8B3gF7Ad4BewG9AXcBvQF3AZwBcwGcAXMB
+        ewFvAXsBbwF7AW8BewFvAVoBawE5AWcBlQFOAdgBGQH/AX8B/wF/Ad8BewHfAXcB3wFzAb4BbwHfAXMB
+        1gEhAYsBMQG9AXcBPAFbAe4BWQEDAWEBOQFzIAAB3gF7AfsBVgE/ATMBXwE/AX8BQwF/AUMBfwFDAV8B
+        PwFfATcBnAE+AfsBXgG6AVYB9gE9ATcBRgEXAUIBtAE5AZwBcwGcAXMBnAFzAZwBcwG9AXcB3gF7Ad4B
+        ewHeAXsB3gF7AZwBcwF7AW8BOQFnATkBZwFaAWsBnAFzAf8BfwGVAUoB+QEhAf8BfwH/AX8B/wF/Af8B
+        ewHeAXMB3wFzAf8BcwHWASEBrAE1Ab0BdwH/AX8B3gF/AZwBewH/AX8gAAG9AXcB+wFOAX8BOwGfAUcB
+        nwFPAb8BTwGfAU8BnwFLAX8BQwGbAUYB+wFeAZoBUgG3ATUB1gE5ARYBQgG0ATkB/wF/Af8BfwH/AX8B
+        3gJ7AW8BWgFrARgBYwE5AWcBGAFjATkBZwFaAWsB/wF/Af8BfwH/AX8B/wF/Af8BfwF1AUYB2QEZAfsB
+        VgGeAXMB/wF/Af8BfwH/AX8B3gF3Af8BewHWAR0BrQE5Ad4BewH/AX8B/wF/Af8BfwH/AX8gAAFbAW8B
+        GwFPAZ8BRwG/AU8B3wFbAd8BWwHfAVsBvwFTAZ8BSwG6AUoBXAFrAV0BawHcAVoBOgFGAdkBOQG1ATUB
+        /wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B3gF7Ad4BewHeAXsB/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B
+        /wF/AXQBRgHaAREBVwEBAXgBCQGYAREB+QElAVoBMgG7AUYBPAFbAbUBGQHNATkB3gF7Af8BfwH/AX8B
+        /wF/Af8BfyAAARkBYwHXAVYBuAFKARoBTwGdAVsB/wFjAf8BYwH/AVsBnwFPAdsBUgF9AW8BXQFrAV0B
+        awF9AW8B2wFaAdoBWgH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8B
+        fwH/AX8B/wF/Af8BfwH/AX8BtQFSAbkBPgGaAS4BWwEiAfoBEQG5AQUBeQEBAVgBAQE4AQEBNAEFAe4B
+        PQHeAXsB/wF/Af8BfwH/AX8B/wF/IAABnAFzAXsBbwE6AWcBGQFjAfkBWgG4AVYB2QFSAfoBUgH7AUoB
+        WAFKATwBZwFdAWsBnQFzAZ0BcwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B
+        /wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8BnAFzAVoBawFaAWcBGQFbAdgBUgG4AUYB
+        mAE6AVgBLgHUASEBtQFWAf8BfwH/AX8B/wF/Af8BfwH/AX8gAAH/AX8B/wF/Af8BfwH/AX8B3gF7Ab4B
+        dwGdAXMBGwFjAZgBUgE7AWcB/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8B
+        fwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8B
+        fwH/AX8B/wF/Af8BfwH/AX8BvQF3AZwBcwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfyAAAUIBTQE+BwAB
+        PgMAASgDAAFAAwABEAMAAQEBAAEBBQABgBcAA/+XAAs=
+</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="cancelButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;imageList.Type">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="deviceTree.ImageIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;deviceTree.Parent">
+    <value>$this</value>
+  </data>
+  <data name="$this.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left</value>
+  </data>
+  <data name="&gt;&gt;$this.Name">
+    <value>UPnPServiceLocator</value>
+  </data>
+  <data name="&gt;&gt;deviceTree.Name">
+    <value>deviceTree</value>
+  </data>
+  <data name="deviceTree.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="cancelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Standard</value>
+  </data>
+  <data name="deviceTree.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="label1.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="okButton.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>248, 320</value>
+  </data>
+  <data name="deviceTree.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;okButton.Name">
+    <value>okButton</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Type">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>8, 8</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Parent">
+    <value>$this</value>
+  </data>
+  <data name="deviceTree.ItemHeight" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;label1.Type">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>2</value>
+  </data>
+  <data name="okButton.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="deviceTree.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>8, 40</value>
+  </data>
+  <data name="deviceTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="deviceTree.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="okButton.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="okButton.Image" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="deviceTree.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="&gt;&gt;okButton.Type">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Text">
+    <value>Select a UPnP network service from which the service description will be loaded from.</value>
+  </data>
+  <data name="okButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="&gt;&gt;label1.Name">
+    <value>label1</value>
+  </data>
+  <data name="deviceTree.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;deviceTree.Type">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="deviceTree.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>344, 272</value>
+  </data>
+  <data name="$this.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="okButton.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>96, 24</value>
+  </data>
+  <data name="&gt;&gt;deviceTree.ZOrder">
+    <value>3</value>
+  </data>
+  <data name="cancelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="$this.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="label1.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="deviceTree.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="$this.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="okButton.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="label1.ImageIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>-1</value>
+  </data>
+  <data name="okButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="okButton.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="cancelButton.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="cancelButton.ImageIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>-1</value>
+  </data>
+  <data name="okButton.TabIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cancelButton.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="label1.Image" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="$this.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="deviceTree.Text">
+    <value />
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.ZOrder">
+    <value>1</value>
+  </data>
+  <data name="label1.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="cancelButton.Image" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </data>
+  <data name="cancelButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="cancelButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="okButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Standard</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="deviceTree.Indent" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>19</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>CenterParent</value>
+  </data>
+  <data name="label1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>5, 13</value>
+  </data>
+  <data name="okButton.Text">
+    <value>OK</value>
+  </data>
+  <data name="cancelButton.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="cancelButton.Text">
+    <value>Cancel</value>
+  </data>
+  <data name="okButton.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </data>
+  <data name="okButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>96, 24</value>
+  </data>
+  <data name="cancelButton.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="deviceTree.TabIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>0</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>TopLeft</value>
+  </data>
+  <data name="okButton.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+</root>

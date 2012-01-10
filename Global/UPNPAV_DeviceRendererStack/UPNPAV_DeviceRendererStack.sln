@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPNPAV_DeviceRendererStack", "UPNPAV_DeviceRendererStack.csproj", "{76F0E0BA-056E-4B30-B09E-F7887BA53B7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPNPAV", "..\UPNPAV\UPNPAV.csproj", "{AC02EE5A-3B7A-45C7-9246-24E0CAE1D357}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnPMultiInstanceRenderer", "..\Tester\UPnPMultiInstanceRenderer.csproj", "{CE80BC81-1D5B-47E4-BD57-E7A9A2142FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnP", "..\..\SourceControl\Global\UPnP\UPnP.csproj", "{584ED187-8F2A-4B58-A266-85F3F212B092}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{76F0E0BA-056E-4B30-B09E-F7887BA53B7D}.Debug.ActiveCfg = Debug|.NET
+		{76F0E0BA-056E-4B30-B09E-F7887BA53B7D}.Debug.Build.0 = Debug|.NET
+		{76F0E0BA-056E-4B30-B09E-F7887BA53B7D}.Release.ActiveCfg = Release|.NET
+		{76F0E0BA-056E-4B30-B09E-F7887BA53B7D}.Release.Build.0 = Release|.NET
+		{AC02EE5A-3B7A-45C7-9246-24E0CAE1D357}.Debug.ActiveCfg = Debug|.NET
+		{AC02EE5A-3B7A-45C7-9246-24E0CAE1D357}.Debug.Build.0 = Debug|.NET
+		{AC02EE5A-3B7A-45C7-9246-24E0CAE1D357}.Release.ActiveCfg = Release|.NET
+		{AC02EE5A-3B7A-45C7-9246-24E0CAE1D357}.Release.Build.0 = Release|.NET
+		{CE80BC81-1D5B-47E4-BD57-E7A9A2142FA7}.Debug.ActiveCfg = Debug|.NET
+		{CE80BC81-1D5B-47E4-BD57-E7A9A2142FA7}.Debug.Build.0 = Debug|.NET
+		{CE80BC81-1D5B-47E4-BD57-E7A9A2142FA7}.Release.ActiveCfg = Release|.NET
+		{CE80BC81-1D5B-47E4-BD57-E7A9A2142FA7}.Release.Build.0 = Release|.NET
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Debug.ActiveCfg = Debug|.NET
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Debug.Build.0 = Debug|.NET
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Release.ActiveCfg = Release|.NET
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

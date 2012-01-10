@@ -1,0 +1,289 @@
+//+-------------------------------------------------------------------------
+//
+//  Microsoft Windows Media Player Control for Pocket PC
+//  Copyright (C) 2001-2002 Microsoft Corporation.  All Rights Reserved.
+//
+//  File: PlayerOCX.idl
+//
+//  Contents: IDL source for PlayerOCX.dll
+//
+//
+//--------------------------------------------------------------------------
+
+cpp_quote("//+-------------------------------------------------------------------------")
+cpp_quote("//")
+cpp_quote("//  Microsoft Windows Media Player Control for Pocket PC")
+cpp_quote("//  Copyright (C) 2001-2002 Microsoft Corporation.  All Rights Reserved.")
+cpp_quote("//")
+cpp_quote("//--------------------------------------------------------------------------")
+
+// This file will be processed by the MIDL tool to
+// produce the type library (PlayerOCX.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+typedef [uuid(66504301-BE0F-101A-8BBB-00AA00300CAB), public] DWORD VB_OLE_COLOR;
+
+
+	[
+		object,
+		uuid(136B66EC-F30D-46A8-88DD-F2D055163E49),
+		dual,
+		helpstring("IWMP Interface"),
+		pointer_default(unique)
+	]
+	interface IWMP : IDispatch
+	{
+		[propput, id(DISPID_AUTOSIZE)]
+		HRESULT AutoSize([in]VARIANT_BOOL vbool);
+		[propget, id(DISPID_AUTOSIZE)]
+		HRESULT AutoSize([out,retval]VARIANT_BOOL* pbool);
+		[propput, id(DISPID_BORDERSTYLE)]
+		HRESULT BorderStyle([in]long style);
+		[propget, id(DISPID_BORDERSTYLE)]
+		HRESULT BorderStyle([out, retval]long* pstyle);
+		[propput, id(DISPID_ENABLED)]
+		HRESULT Enabled([in]VARIANT_BOOL vbool);
+		[propget, id(DISPID_ENABLED)]
+		HRESULT Enabled([out,retval]VARIANT_BOOL* pbool);
+		[propget, id(1), helpstring("property FileName")] HRESULT FileName([out, retval] BSTR *pVal);
+		[propput, id(1), helpstring("property FileName")] HRESULT FileName([in] BSTR newVal);
+		[propget, id(2), helpstring("property Volume")] HRESULT Volume([out, retval] long *pVal);
+		[propput, id(2), helpstring("property Volume")] HRESULT Volume([in] long newVal);
+		[propget, id(3), helpstring("property Mute")] HRESULT Mute([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(3), helpstring("property Mute")] HRESULT Mute([in] VARIANT_BOOL newVal);
+		[propget, id(4), helpstring("property AutoStart")] HRESULT AutoStart([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(4), helpstring("property AutoStart")] HRESULT AutoStart([in] VARIANT_BOOL newVal);
+		[propget, id(5), helpstring("property PlayCount")] HRESULT PlayCount([out, retval] long *pVal);
+		[propput, id(5), helpstring("property PlayCount")] HRESULT PlayCount([in] long newVal);
+		[propget, id(6), helpstring("property ShowStatusBar")] HRESULT ShowStatusBar([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(6), helpstring("property ShowStatusBar")] HRESULT ShowStatusBar([in] VARIANT_BOOL newVal);
+		[propget, id(7), helpstring("property ShowAudioControls")] HRESULT ShowAudioControls([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(7), helpstring("property ShowAudioControls")] HRESULT ShowAudioControls([in] VARIANT_BOOL newVal);
+		[propget, id(8), helpstring("property ShowCaptioning")] HRESULT ShowCaptioning([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(8), helpstring("property ShowCaptioning")] HRESULT ShowCaptioning([in] VARIANT_BOOL newVal);
+		[propget, id(9), helpstring("property ShowControls")] HRESULT ShowControls([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(9), helpstring("property ShowControls")] HRESULT ShowControls([in] VARIANT_BOOL newVal);
+		[propget, id(10), helpstring("property ShowDisplay")] HRESULT ShowDisplay([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(10), helpstring("property ShowDisplay")] HRESULT ShowDisplay([in] VARIANT_BOOL newVal);
+		[propget, id(11), helpstring("property ShowGotoBar")] HRESULT ShowGotoBar([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(11), helpstring("property ShowGotoBar")] HRESULT ShowGotoBar([in] VARIANT_BOOL newVal);
+		[propget, id(12), helpstring("property ShowPositionControls")] HRESULT ShowPositionControls([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(12), helpstring("property ShowPositionControls")] HRESULT ShowPositionControls([in] VARIANT_BOOL newVal);
+		[propget, id(13), helpstring("property ShowTracker")] HRESULT ShowTracker([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(13), helpstring("property ShowTracker")] HRESULT ShowTracker([in] VARIANT_BOOL newVal);
+		[id(14), helpstring("method Startup")] HRESULT Startup();
+		[id(15), helpstring("method Shutdown")] HRESULT Shutdown();
+		[propget, id(16), helpstring("property Bandwidth")] HRESULT Bandwidth([out, retval] long *pVal);
+		[propget, id(17), helpstring("property BaseURL")] HRESULT BaseURL([out, retval] BSTR *pVal);
+		[propput, id(17), helpstring("property BaseURL")] HRESULT BaseURL([in] BSTR pVal);
+		[propget, id(18), helpstring("property BufferingCount")] HRESULT BufferingCount([out, retval] long *pVal);
+		[propget, id(19), helpstring("property BufferingProgress")] HRESULT BufferingProgress([out, retval] long *pVal);
+		[propget, id(20), helpstring("property BufferingTime")] HRESULT BufferingTime([out, retval] double *pVal);
+		[propget, id(21), helpstring("property CanSeek")] HRESULT CanSeek([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(22), helpstring("property CanSeekToMarkers")] HRESULT CanSeekToMarkers([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(23), helpstring("property ChannelDescription")] HRESULT ChannelDescription([out, retval] BSTR *pVal);
+		[propget, id(24), helpstring("property ChannelName")] HRESULT ChannelName([out, retval] BSTR *pVal);
+		[propget, id(25), helpstring("property ChannelURL")] HRESULT ChannelURL([out, retval] BSTR *pVal);
+		[propget, id(26), helpstring("property ClientID")] HRESULT ClientID([out, retval] BSTR *pVal);
+		[propget, id(27), helpstring("property ConnectionSpeed")] HRESULT ConnectionSpeed([out, retval] long *pVal);
+		[propget, id(28), helpstring("property ContactAddress")] HRESULT ContactAddress([out, retval] BSTR *pVal);
+		[propget, id(29), helpstring("property ContactEmail")] HRESULT ContactEmail([out, retval] BSTR *pVal);
+		[propget, id(30), helpstring("property ContactPhone")] HRESULT ContactPhone([out, retval] BSTR *pVal);
+		[propget, id(31), helpstring("property CurrentMarker")] HRESULT CurrentMarker([out, retval] long *pVal);
+		[propput, id(31), helpstring("property CurrentMarker")] HRESULT CurrentMarker([in] long newVal);
+		[propget, id(32), helpstring("property CurrentPosition")] HRESULT CurrentPosition([out, retval] double *pVal);
+		[propput, id(32), helpstring("property CurrentPosition")] HRESULT CurrentPosition([in] double newVal);
+		[propget, id(33), helpstring("property DefaultFrame")] HRESULT DefaultFrame([out, retval] BSTR *pVal);
+		[propput, id(33), helpstring("property DefaultFrame")] HRESULT DefaultFrame([in] BSTR newVal);
+		[propget, id(34), helpstring("property Duration")] HRESULT Duration([out, retval] double *pVal);
+		[propget, id(35), helpstring("property EntryCount")] HRESULT EntryCount([out, retval] long *pVal);
+		[propget, id(36), helpstring("property ErrorCode")] HRESULT ErrorCode([out, retval] long *pVal);
+		[propget, id(37), helpstring("property ErrorDescription")] HRESULT ErrorDescription([out, retval] BSTR *pVal);
+		[propget, id(38), helpstring("property HasError")] HRESULT HasError([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(39), helpstring("property HasMultipleItems")] HRESULT HasMultipleItems([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(40), helpstring("property ImageSourceHeight")] HRESULT ImageSourceHeight([out, retval] long *pVal);
+		[propget, id(41), helpstring("property ImageSourceWidth")] HRESULT ImageSourceWidth([out, retval] long *pVal);
+		[propget, id(42), helpstring("property InvokeURLs")] HRESULT InvokeURLs([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(42), helpstring("property InvokeURLs")] HRESULT InvokeURLs([in] VARIANT_BOOL newVal);
+		[propget, id(43), helpstring("property IsBroadcast")] HRESULT IsBroadcast([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(44), helpstring("property IsDurationValid")] HRESULT IsDurationValid([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(45), helpstring("property LostPackets")] HRESULT LostPackets([out, retval] long *pVal);
+		[propget, id(46), helpstring("property MarkerCount")] HRESULT MarkerCount([out, retval] long *pVal);
+		[propget, id(47), helpstring("property OpenState")] HRESULT OpenState([out, retval] long *pVal);
+		[propget, id(48), helpstring("property PlayState")] HRESULT PlayState([out, retval] long *pVal);
+		[propget, id(49), helpstring("property PreviewMode")] HRESULT PreviewMode([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(49), helpstring("property PreviewMode")] HRESULT PreviewMode([in] VARIANT_BOOL newVal);
+		[propget, id(50), helpstring("property ReadyState")] HRESULT ReadyState([out, retval] long *pVal);
+		[propget, id(51), helpstring("property ReceivedPackets")] HRESULT ReceivedPackets([out, retval] long *pVal);
+		[propget, id(52), helpstring("property ReceptionQuality")] HRESULT ReceptionQuality([out, retval] long *pVal);
+		[propget, id(53), helpstring("property RecoveredPackets")] HRESULT RecoveredPackets([out, retval] long *pVal);
+		[propget, id(54), helpstring("property SAMIFileName")] HRESULT SAMIFileName([out, retval] BSTR *pVal);
+		[propput, id(54), helpstring("property SAMIFileName")] HRESULT SAMIFileName([in] BSTR newVal);
+		[propget, id(55), helpstring("property SAMILang")] HRESULT SAMILang([out, retval] BSTR *pVal);
+		[propput, id(55), helpstring("property SAMILang")] HRESULT SAMILang([in] BSTR newVal);
+		[propget, id(56), helpstring("property SAMIStyle")] HRESULT SAMIStyle([out, retval] BSTR *pVal);
+		[propput, id(56), helpstring("property SAMIStyle")] HRESULT SAMIStyle([in] BSTR newVal);
+		[propget, id(57), helpstring("property SelectionEnd")] HRESULT SelectionEnd([out, retval] double *pVal);
+		[propput, id(57), helpstring("property SelectionEnd")] HRESULT SelectionEnd([in] double newVal);
+		[propget, id(58), helpstring("property SelectionStart")] HRESULT SelectionStart([out, retval] double *pVal);
+		[propput, id(58), helpstring("property SelectionStart")] HRESULT SelectionStart([in] double newVal);
+		[propget, id(59), helpstring("property SendErrorEvents")] HRESULT SendErrorEvents([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(59), helpstring("property SendErrorEvents")] HRESULT SendErrorEvents([in] VARIANT_BOOL newVal);
+		[propget, id(60), helpstring("property SendKeyboardEvents")] HRESULT SendKeyboardEvents([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(60), helpstring("property SendKeyboardEvents")] HRESULT SendKeyboardEvents([in] VARIANT_BOOL newVal);
+		[propget, id(61), helpstring("property SendMouseClickEvents")] HRESULT SendMouseClickEvents([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(61), helpstring("property SendMouseClickEvents")] HRESULT SendMouseClickEvents([in] VARIANT_BOOL newVal);
+		[propget, id(62), helpstring("property SendMouseMoveEvents")] HRESULT SendMouseMoveEvents([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(62), helpstring("property SendMouseMoveEvents")] HRESULT SendMouseMoveEvents([in] VARIANT_BOOL newVal);
+		[propget, id(63), helpstring("property SendOpenStateChangeEvents")] HRESULT SendOpenStateChangeEvents([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(63), helpstring("property SendOpenStateChangeEvents")] HRESULT SendOpenStateChangeEvents([in] VARIANT_BOOL newVal);
+		[propget, id(64), helpstring("property SendPlayStateChangeEvents")] HRESULT SendPlayStateChangeEvents([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(64), helpstring("property SendPlayStateChangeEvents")] HRESULT SendPlayStateChangeEvents([in] VARIANT_BOOL newVal);
+		[propget, id(65), helpstring("property SendWarningEvents")] HRESULT SendWarningEvents([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(65), helpstring("property SendWarningEvents")] HRESULT SendWarningEvents([in] VARIANT_BOOL newVal);
+		[propget, id(66), helpstring("property SourceLink")] HRESULT SourceLink([out, retval] BSTR *pVal);
+		[id(67), helpstring("method AboutBox")] HRESULT AboutBox();
+		[id(68), helpstring("method Cancel")] HRESULT Cancel();
+		[id(69), helpstring("method GetCodecDescription")] HRESULT GetCodecDescription([in] long nCodec,
+                                                                                       [out, retval] BSTR *pDescription);
+		[id(70), helpstring("method GetCodecInstalled")] HRESULT GetCodecInstalled([in] BSTR *pstrCodec,
+                                                                                   [out, retval] VARIANT_BOOL *pIsInstalled);
+		[id(71), helpstring("method GetCurrentEntry")] HRESULT GetCurrentEntry([out, retval] long *pVal);
+		[id(72), helpstring("method GetMarkerName")] HRESULT GetMarkerName([in] long nMarker,
+                                                                           [out, retval] BSTR *pMarkerName);
+		[id(73), helpstring("method GetMarkerTime")] HRESULT GetMarkerTime([in] long nMarker,
+                                                                           [out, retval] double *pMarkerTime);
+		[id(74), helpstring("method GetMediaInfoString")] HRESULT GetMediaInfoString([in] long MPMediaInfoType,
+                                                                                     [out, retval] BSTR *pstrMediaInfo);
+		[id(75), helpstring("method Next")] HRESULT Next();
+		[id(76), helpstring("method Open")] HRESULT Open(BSTR pstrClip);
+		[id(77), helpstring("method Pause")] HRESULT Pause();
+		[id(78), helpstring("method Play")] HRESULT Play();
+		[id(79), helpstring("method Previous")] HRESULT Previous();
+		[id(80), helpstring("method Stop")] HRESULT Stop();
+		[propget, id(81), helpstring("property Rate")] HRESULT Rate([out, retval] double *pVal);
+		[propput, id(81), helpstring("property Rate")] HRESULT Rate([in] double newVal);
+		[propget, id(82), helpstring("property DisplaySize")] HRESULT DisplaySize([out, retval] long *pVal);
+		[propput, id(82), helpstring("property DisplaySize")] HRESULT DisplaySize([in] long newVal);
+		[propget, id(83), helpstring("property SourceProtocol")] HRESULT SourceProtocol([out, retval] long *pVal);
+		[propget, id(84), helpstring("property ErrorCorrection")] HRESULT ErrorCorrection([out, retval] BSTR *pVal);
+		[id(85), helpstring("method FinalConstruct")] HRESULT FinalConstruct();
+		[propget, id(86), helpstring("property AllowChangeDisplaySize")] HRESULT AllowChangeDisplaySize([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(86), helpstring("property AllowChangeDisplaySize")] HRESULT AllowChangeDisplaySize([in] VARIANT_BOOL newVal);
+		[propget, id(87), helpstring("property AllowScan")] HRESULT AllowScan([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(87), helpstring("property AllowScan")] HRESULT AllowScan([in] VARIANT_BOOL newVal);
+		[propget, id(88), helpstring("property AnimationAtStart")] HRESULT AnimationAtStart([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(88), helpstring("property AnimationAtStart")] HRESULT AnimationAtStart([in] VARIANT_BOOL newVal);
+		[propget, id(89), helpstring("property AudioStream")] HRESULT AudioStream([out, retval] long *pVal);
+		[propput, id(89), helpstring("property AudioStream")] HRESULT AudioStream([in] long newVal);
+		[propget, id(90), helpstring("property AutoRewind")] HRESULT AutoRewind([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(90), helpstring("property AutoRewind")] HRESULT AutoRewind([in] VARIANT_BOOL newVal);
+		[propget, id(91), helpstring("property Balance")] HRESULT Balance([out, retval] long *pVal);
+		[propput, id(91), helpstring("property Balance")] HRESULT Balance([in] long newVal);
+		[propget, id(92), helpstring("property CanPreview")] HRESULT CanPreview([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(93), helpstring("property CanScan")] HRESULT CanScan([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(94), helpstring("property CaptioningID")] HRESULT CaptioningID([out, retval] BSTR *pVal);
+		[propget, id(95), helpstring("property ClickToPlay")] HRESULT ClickToPlay([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(95), helpstring("property ClickToPlay")] HRESULT ClickToPlay([in] VARIANT_BOOL newVal);
+		[propget, id(96), helpstring("property CodecCount")] HRESULT CodecCount([out, retval] long *pVal);
+		[propget, id(97), helpstring("property CreationDate")] HRESULT CreationDate([out, retval] DATE *pVal);
+		[propget, id(98), helpstring("property CursorType")] HRESULT CursorType([out, retval] long *pVal);
+		[propput, id(98), helpstring("property CursorType")] HRESULT CursorType([in] long newVal);
+		[propget, id(99), helpstring("property DisplayBackColor")] HRESULT DisplayBackColor([out, retval] VB_OLE_COLOR *pVal);
+		[propput, id(99), helpstring("property DisplayBackColor")] HRESULT DisplayBackColor([in] VB_OLE_COLOR newVal);
+		[propget, id(100), helpstring("property DisplayForeColor")] HRESULT DisplayForeColor([out, retval] VB_OLE_COLOR *pVal);
+		[propput, id(100), helpstring("property DisplayForeColor")] HRESULT DisplayForeColor([in] VB_OLE_COLOR newVal);
+		[propget, id(101), helpstring("property DisplayMode")] HRESULT DisplayMode([out, retval] long *pVal);
+		[propput, id(101), helpstring("property DisplayMode")] HRESULT DisplayMode([in] long newVal);
+		[propget, id(102), helpstring("property EnableContextMenu")] HRESULT EnableContextMenu([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(102), helpstring("property EnableContextMenu")] HRESULT EnableContextMenu([in] VARIANT_BOOL newVal);
+		[propget, id(103), helpstring("property EnableFullScreenControls")] HRESULT EnableFullScreenControls([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(103), helpstring("property EnableFullScreenControls")] HRESULT EnableFullScreenControls([in] VARIANT_BOOL newVal);
+		[propget, id(104), helpstring("property EnablePositionControls")] HRESULT EnablePositionControls([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(104), helpstring("property EnablePositionControls")] HRESULT EnablePositionControls([in] VARIANT_BOOL newVal);
+		[propget, id(105), helpstring("property EnableTracker")] HRESULT EnableTracker([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(105), helpstring("property EnableTracker")] HRESULT EnableTracker([in] VARIANT_BOOL newVal);
+		[propget, id(106), helpstring("property Language")] HRESULT Language([out, retval] long *pVal);
+		[propget, id(107), helpstring("property StreamCount")] HRESULT StreamCount([out, retval] long *pVal);
+		[propget, id(108), helpstring("property TransparentAtStart")] HRESULT TransparentAtStart([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(108), helpstring("property TransparentAtStart")] HRESULT TransparentAtStart([in] VARIANT_BOOL newVal);
+		[propget, id(109), helpstring("property VideoBorder3D")] HRESULT VideoBorder3D([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(109), helpstring("property VideoBorder3D")] HRESULT VideoBorder3D([in] VARIANT_BOOL newVal);
+		[propget, id(110), helpstring("property VideoBorderColor")] HRESULT VideoBorderColor([out, retval] long *pVal);
+		[propput, id(110), helpstring("property VideoBorderColor")] HRESULT VideoBorderColor([in] long newVal);
+		[propget, id(111), helpstring("property VideoBorderWidth")] HRESULT VideoBorderWidth([out, retval] long *pVal);
+		[propput, id(111), helpstring("property VideoBorderWidth")] HRESULT VideoBorderWidth([in] long newVal);
+		[id(112), helpstring("method FastForward")] HRESULT FastForward();
+		[id(113), helpstring("method FastReverse")] HRESULT FastReverse();
+		[id(114), helpstring("method GetCodecURL")] HRESULT GetCodecURL([out, retval] BSTR *pstrCodecURL);
+		[id(115), helpstring("method GetMediaParameter")] HRESULT GetMediaParameter([in] long nParam, BSTR szParameterName,
+                                                                                    [out, retval] BSTR *pstrParameterValue);
+		[id(116), helpstring("method GetMediaParameterName")] HRESULT GetMediaParameterName([in] long nParam, long nIndex,
+                                                                                            [out, retval] BSTR *pstrParameterName);
+		[id(117), helpstring("method GetMoreInfoURL")] HRESULT GetMoreInfoURL([out, retval] BSTR *pstrMoreInfoURL);
+		[id(118), helpstring("method GetStreamGroup")] HRESULT GetStreamGroup([out, retval] BSTR *pstrStreamGroup);
+		[id(119), helpstring("method GetStreamName")] HRESULT GetStreamName([out, retval] BSTR *pstrStreamName);
+		[id(120), helpstring("method GetStreamSelected")] HRESULT GetStreamSelected([in] long nStream,
+                                                                                    [out, retval] VARIANT_BOOL *fIsSelected);
+		[id(121), helpstring("method IsSoundCardEnabled")] HRESULT IsSoundCardEnabled([out, retval] VARIANT_BOOL *fIsEnabled);
+		[id(122), helpstring("method SetCurrentEntry")] HRESULT SetCurrentEntry(long nValue);
+		[id(123), helpstring("method ShowDialog")] HRESULT ShowDialog(long nValue);
+		[id(124), helpstring("method StreamSelect")] HRESULT StreamSelect(long nSelect);
+		[id(125), helpstring("method OnWindowMessage")] HRESULT OnWindowMessage(UINT msg, WPARAM wParam, LPARAM lParam, LRESULT *plResult);
+	};
+
+[
+	uuid(0E40C3E9-930F-41A0-A1E2-99AF3E680508),
+	version(1.0),
+	helpstring("PlayerOCX 1.0 Type Library")
+]
+library PLAYEROCXLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(E17A7C5E-CB17-4379-A487-C8ABC76A6541),
+		helpstring("_IWMPEvents Interface")
+	]
+	dispinterface _IWMPEvents
+	{
+		properties:
+		methods:
+		[id(1),  helpstring("event Buffering")]         HRESULT Buffering(          [in] VARIANT_BOOL Start);
+		[id(2),  helpstring("event Click")]             HRESULT Click(              [in] long Button, long ShiftState, long x, long y);
+		[id(3),  helpstring("event DblClick")]          HRESULT DblClick(           [in] long Button, long ShiftState, long x, long y);
+		[id(4),  helpstring("event Disconnect")]        HRESULT Disconnect(         [in] long Result);
+		[id(5),  helpstring("event DisplayModeChange")] HRESULT DisplayModeChange(  );
+		[id(6),  helpstring("event EndOfStream")]       HRESULT EndOfStream(        [in] long Result);
+		[id(7),  helpstring("event Error")]             HRESULT Error(              );
+		[id(8),  helpstring("event KeyDown")]           HRESULT KeyDown(            [in] long KeyCode, long ShiftState);
+		[id(9),  helpstring("event KeyPress")]          HRESULT KeyPress(           [in] long KeyAscii);
+		[id(10), helpstring("event KeyUp")]             HRESULT KeyUp(              [in] long KeyCode, long ShiftState);
+		[id(11), helpstring("event MarkerHit")]         HRESULT MarkerHit(          [in] long MarkerNum);
+		[id(12), helpstring("event MouseDown")]         HRESULT MouseDown(          [in] long Button, long ShiftState, long x, long y);
+		[id(13), helpstring("event MouseMove")]         HRESULT MouseMove(          [in] long Button, long ShiftState, long x, long y);
+		[id(14), helpstring("event MouseUp")]           HRESULT MouseUp(            [in] long Button, long ShiftState, long x, long y);
+		[id(15), helpstring("event NewStream")]         HRESULT NewStream(          );
+		[id(16), helpstring("event OpenStateChange")]   HRESULT OpenStateChange(    [in] long OldState, long NewState);
+		[id(17), helpstring("event PlayStateChange")]   HRESULT PlayStateChange(    [in] long OldState, long NewState);
+		[id(18), helpstring("event PositionChange")]    HRESULT PositionChange(     [in] double OldPosition, double NewPosition);
+		[id(19), helpstring("event ReadyStateChange")]  HRESULT ReadyStateChange(   [in] long ReadyState);
+		[id(20), helpstring("event ScriptCommand")]     HRESULT ScriptCommand(      [in] BSTR scType, BSTR Param);
+		[id(21), helpstring("event Warning")]           HRESULT Warning(            [in] long WarningType, long Param, BSTR Description);
+	};
+
+	[
+		uuid(22D6F312-B0F6-11D0-94AB-0080C74C7E95),
+		helpstring("WMP Class")
+	]
+	coclass WMP
+	{
+		[default] interface IWMP;
+		[default, source] dispinterface _IWMPEvents;
+	};
+};
+

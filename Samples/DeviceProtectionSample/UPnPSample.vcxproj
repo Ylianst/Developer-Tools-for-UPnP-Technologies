@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9166753F-287E-40C9-9CEE-1FE0040D930C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>UPnPDeviceProtection</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;WINSOCK2;WPS_REGISTRAR;WPS_ENROLLEE;_TUDEBUGTRACE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WS2_32.lib;libeay32MTd.lib;ssleay32MTd.lib;Psapi.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)UPnPDeviceProtection.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\openssl\libstatic;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)UPnPSample.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;WINSOCK2;WPS_ENROLLEE;WPS_REGISTRAR;_TUDEBUGTRACE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WS2_32.lib;ssleay32MT.lib;libeay32MT.lib;Psapi.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)UPnPDeviceProtection.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\openssl\libstatic;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CPControlPoint.c" />
+    <ClCompile Include="DPServerInfo.cpp" />
+    <ClCompile Include="DPTest.cpp" />
+    <ClCompile Include="DVMicroStack.c" />
+    <ClCompile Include="ILibAsyncServerSocket.c" />
+    <ClCompile Include="ILibAsyncSocket.c" />
+    <ClCompile Include="ILibAsyncUDPSocket.c" />
+    <ClCompile Include="ILibParsers.c" />
+    <ClCompile Include="ILibSSDPClient.c" />
+    <ClCompile Include="ILibWebClient.c" />
+    <ClCompile Include="ILibWebServer.c" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Portability.c" />
+    <ClCompile Include="ProtoUtils.cpp" />
+    <ClCompile Include="RegProtocol.cpp" />
+    <ClCompile Include="RegProtoMsgs.cpp" />
+    <ClCompile Include="RegProtoTlv.cpp" />
+    <ClCompile Include="slist.c" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="tutrace.cpp" />
+    <ClCompile Include="utils.c" />
+    <ClCompile Include="WPSEnrollee.cpp" />
+    <ClCompile Include="WPSRegistrar.cpp" />
+    <ClCompile Include="WscTlvBase.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CPControlPoint.h" />
+    <ClInclude Include="DataTypes.h" />
+    <ClInclude Include="DPServerInfo.h" />
+    <ClInclude Include="DVMicroStack.h" />
+    <ClInclude Include="ILibAsyncServerSocket.h" />
+    <ClInclude Include="ILibAsyncSocket.h" />
+    <ClInclude Include="ILibAsyncUDPSocket.h" />
+    <ClInclude Include="ILibParsers.h" />
+    <ClInclude Include="ILibSSDPClient.h" />
+    <ClInclude Include="ILibWebClient.h" />
+    <ClInclude Include="ILibWebServer.h" />
+    <ClInclude Include="Portability.h" />
+    <ClInclude Include="RegProtocol.h" />
+    <ClInclude Include="regprotomsgs.h" />
+    <ClInclude Include="RegProtoTlv.h" />
+    <ClInclude Include="slist.h" />
+    <ClInclude Include="StateMachineInfo.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="tutrace.h" />
+    <ClInclude Include="UPnPControlPointStructs.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="wpsenrollee.h" />
+    <ClInclude Include="wpsregistrar.h" />
+    <ClInclude Include="WscCommon.h" />
+    <ClInclude Include="WscError.h" />
+    <ClInclude Include="WscHeaders.h" />
+    <ClInclude Include="WscTlvBase.h" />
+    <ClInclude Include="WscTypes.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

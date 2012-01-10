@@ -1,0 +1,18 @@
+// Win32_WML.idl : IDL source for Win32_WML
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Win32_WML.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(679C8126-F4D6-4832-BE62-8ECC09CE8D12),
+	version(1.0),
+	helpstring("Win32_WML 1.0 Type Library")
+]
+library Win32_WMLLib
+{
+	importlib("stdole2.tlb");
+};

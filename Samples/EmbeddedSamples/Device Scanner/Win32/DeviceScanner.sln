@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeviceScanner", "DeviceScanner.vcproj", "{ABB1A0C3-1081-46B8-A6EE-0D3EC4D45998}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{ABB1A0C3-1081-46B8-A6EE-0D3EC4D45998}.Debug.ActiveCfg = Debug|Win32
+		{ABB1A0C3-1081-46B8-A6EE-0D3EC4D45998}.Debug.Build.0 = Debug|Win32
+		{ABB1A0C3-1081-46B8-A6EE-0D3EC4D45998}.Release.ActiveCfg = Release|Win32
+		{ABB1A0C3-1081-46B8-A6EE-0D3EC4D45998}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

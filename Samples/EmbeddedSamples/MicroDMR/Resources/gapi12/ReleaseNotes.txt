@@ -1,0 +1,82 @@
+GAPI 1.2 include new features to support non-standard displays devices.
+
+For this reasons, two new APIs have been added :
+
+
+GXSetViewport
+This function defines a GAPI viewport.  
+
+int GXSetViewport( DWORD dwTop, DWORD dwHeight, DWORD dwReserved1, DWORD dwReserved2 )
+
+Parameters
+
+	dwTop
+		Screen position of the top of the viewport.
+	
+	dwHeight
+		Height of the viewport.	
+
+	dwReserved1
+		Reserved for future use.  Must be 0.
+
+	dwReserved2
+		Reserved for future use.  Must be 0.
+
+
+Return Values
+	1 if the function succeeded.
+	0 if it failed.  Use GetLastError to get extended error info.
+
+
+Remark
+	This is not a clipper.  
+	On standard display devices, this code will have no effect. 
+	On non-standard display devices, this function allows you to define the screen region that will be affected by the blit.
+	
+
+Requirements 
+Runs on Versions 	Defined in Include 	Link to 
+	Pocket PC 3.0 	Gx.h   			Gx.lib 
+
+Available only in GAPI 1.2
+
+
+Note   This information applies to the version of the operating system as provided by Microsoft. Actual implementation is determined by the original equipment manufacturer (OEM) and some devices may not support this function.
+
+See Also
+GXIsDisplayDRAMBuffe
+
+
+
+
+GXIsDisplayDRAMBuffer
+This function returns if the device is a non-standard display device.
+
+BOOL GXIsDisplayDRAMBuffer()
+
+Parameters
+
+	None.
+
+
+Return Values
+	TRUE for non-standard display devices
+	FALSE for standard display devices
+
+
+Remark
+	This is provided as an information only.  You do not need to use this function.  You can safely use any
+	GAPI function on standard and non-standard devices.  GXSetViewport should always be called regardless of
+	the type of display used.
+
+Requirements 
+Runs on Versions 	Defined in Include 	Link to 
+	Pocket PC 3.0 	Gx.h   			Gx.lib 
+
+Available only in GAPI 1.2
+
+
+Note   This information applies to the version of the operating system as provided by Microsoft. Actual implementation is determined by the original equipment manufacturer (OEM) and some devices may not support this function.
+
+See Also
+GXSetViewport

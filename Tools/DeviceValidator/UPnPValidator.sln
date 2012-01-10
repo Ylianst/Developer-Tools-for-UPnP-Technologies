@@ -1,0 +1,93 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnPValidator", "UPnPValidator.csproj", "{2C3057B0-6516-40F1-9BB8-7C65484CC2AA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaData", "D:\LAVALAKE\UPnP\DotNet\Global\MetaData\MetaData.csproj", "{540366D1-629D-4DBA-9442-BB839E102D4E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnP", "D:\LAVALAKE\UPnP\DotNet\Global\UPnP\UPnP.csproj", "{584ED187-8F2A-4B58-A266-85F3F212B092}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPNP_AV", "D:\LAVALAKE\UPnP\DotNet\Global\UPNP_AV\UPNP_AV.csproj", "{7B4035A7-6E1C-42EE-AA17-924BDCB5DC1F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPNPAV_RendererStack", "D:\LAVALAKE\UPnP\DotNet\Global\UPNPAV_RendererStack\UPNPAV_RendererStack.csproj", "{E01B6019-ACC6-40A6-A511-48D285D51C40}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPNPAVCDSML", "D:\LAVALAKE\UPnP\DotNet\Global\UPNPAVCDSML\UPNPAVCDSML.csproj", "{8EA0E595-45EC-40C1-82CE-269F4FA9EBB3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPNPAVMSCP", "D:\LAVALAKE\UPnP\DotNet\Global\UPNPAVMSCP\UPNPAVMSCP.csproj", "{8901DF28-45ED-4BC5-8972-AE463A68E756}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnPValidatorPluginInterfaces", "..\ValidatorInterfaces\UPnPValidatorPluginInterfaces.csproj", "{AD112426-E7BB-4AE9-B286-AD21E0CB3E6B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceScriptor", "..\DeviceScriptor\DeviceScriptor.csproj", "{1BA4A7A5-885E-4E5B-ACEE-955DD6B58B0F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceScriptorScriptEngine", "..\DeviceScriptorScriptEngine\DeviceScriptorScriptEngine.csproj", "{CF18CB6C-FD50-4100-BF11-B265E760AD52}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{2C3057B0-6516-40F1-9BB8-7C65484CC2AA}.Debug.ActiveCfg = Debug|.NET
+		{2C3057B0-6516-40F1-9BB8-7C65484CC2AA}.Debug.Build.0 = Debug|.NET
+		{2C3057B0-6516-40F1-9BB8-7C65484CC2AA}.Release.ActiveCfg = Release|.NET
+		{2C3057B0-6516-40F1-9BB8-7C65484CC2AA}.Release.Build.0 = Release|.NET
+		{540366D1-629D-4DBA-9442-BB839E102D4E}.Debug.ActiveCfg = Debug|.NET
+		{540366D1-629D-4DBA-9442-BB839E102D4E}.Debug.Build.0 = Debug|.NET
+		{540366D1-629D-4DBA-9442-BB839E102D4E}.Release.ActiveCfg = Release|.NET
+		{540366D1-629D-4DBA-9442-BB839E102D4E}.Release.Build.0 = Release|.NET
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Debug.ActiveCfg = Debug|.NET
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Debug.Build.0 = Debug|.NET
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Release.ActiveCfg = Release|.NET
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Release.Build.0 = Release|.NET
+		{7B4035A7-6E1C-42EE-AA17-924BDCB5DC1F}.Debug.ActiveCfg = Debug|.NET
+		{7B4035A7-6E1C-42EE-AA17-924BDCB5DC1F}.Debug.Build.0 = Debug|.NET
+		{7B4035A7-6E1C-42EE-AA17-924BDCB5DC1F}.Release.ActiveCfg = Release|.NET
+		{7B4035A7-6E1C-42EE-AA17-924BDCB5DC1F}.Release.Build.0 = Release|.NET
+		{E01B6019-ACC6-40A6-A511-48D285D51C40}.Debug.ActiveCfg = Debug|.NET
+		{E01B6019-ACC6-40A6-A511-48D285D51C40}.Debug.Build.0 = Debug|.NET
+		{E01B6019-ACC6-40A6-A511-48D285D51C40}.Release.ActiveCfg = Release|.NET
+		{E01B6019-ACC6-40A6-A511-48D285D51C40}.Release.Build.0 = Release|.NET
+		{8EA0E595-45EC-40C1-82CE-269F4FA9EBB3}.Debug.ActiveCfg = Debug|.NET
+		{8EA0E595-45EC-40C1-82CE-269F4FA9EBB3}.Debug.Build.0 = Debug|.NET
+		{8EA0E595-45EC-40C1-82CE-269F4FA9EBB3}.Release.ActiveCfg = Release|.NET
+		{8EA0E595-45EC-40C1-82CE-269F4FA9EBB3}.Release.Build.0 = Release|.NET
+		{8901DF28-45ED-4BC5-8972-AE463A68E756}.Debug.ActiveCfg = Debug|.NET
+		{8901DF28-45ED-4BC5-8972-AE463A68E756}.Debug.Build.0 = Debug|.NET
+		{8901DF28-45ED-4BC5-8972-AE463A68E756}.Release.ActiveCfg = Release|.NET
+		{8901DF28-45ED-4BC5-8972-AE463A68E756}.Release.Build.0 = Release|.NET
+		{AD112426-E7BB-4AE9-B286-AD21E0CB3E6B}.Debug.ActiveCfg = Debug|.NET
+		{AD112426-E7BB-4AE9-B286-AD21E0CB3E6B}.Debug.Build.0 = Debug|.NET
+		{AD112426-E7BB-4AE9-B286-AD21E0CB3E6B}.Release.ActiveCfg = Release|.NET
+		{AD112426-E7BB-4AE9-B286-AD21E0CB3E6B}.Release.Build.0 = Release|.NET
+		{1BA4A7A5-885E-4E5B-ACEE-955DD6B58B0F}.Debug.ActiveCfg = Debug|.NET
+		{1BA4A7A5-885E-4E5B-ACEE-955DD6B58B0F}.Debug.Build.0 = Debug|.NET
+		{1BA4A7A5-885E-4E5B-ACEE-955DD6B58B0F}.Release.ActiveCfg = Release|.NET
+		{1BA4A7A5-885E-4E5B-ACEE-955DD6B58B0F}.Release.Build.0 = Release|.NET
+		{CF18CB6C-FD50-4100-BF11-B265E760AD52}.Debug.ActiveCfg = Debug|.NET
+		{CF18CB6C-FD50-4100-BF11-B265E760AD52}.Debug.Build.0 = Debug|.NET
+		{CF18CB6C-FD50-4100-BF11-B265E760AD52}.Release.ActiveCfg = Release|.NET
+		{CF18CB6C-FD50-4100-BF11-B265E760AD52}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,387 @@
+# Microsoft eMbedded Visual Tools Project File - Name="Renderer" - Package Owner=<4>
+# Microsoft eMbedded Visual Tools Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE ARM) Application" 0x8501
+
+CFG=Renderer - Win32 (WCE ARM) Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "MicroMediaRendererApp.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "MicroMediaRendererApp.vcn" CFG="Renderer - Win32 (WCE ARM) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "Renderer - Win32 (WCE ARM) Release" (based on "Win32 (WCE ARM) Application")
+!MESSAGE "Renderer - Win32 (WCE ARM) Debug" (based on "Win32 (WCE ARM) Application")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+# PROP ATL_Project 2
+CPP=clarm.exe
+MTL=midl.exe
+RSC=rc.exe
+
+!IF  "$(CFG)" == "Renderer - Win32 (WCE ARM) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMRel"
+# PROP BASE Intermediate_Dir "ARMRel"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMRel"
+# PROP Intermediate_Dir "ARMRel"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /YX /Oxs /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /I "..\PocketPC_MmrRslMp" /I "..\DeviceBuilder\PocketPC" /I "..\\" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_M3U_BUFFER" /FR /Oxs /M$(CECrtMT) /c
+# SUBTRACT CPP /YX
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib atlce300.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"$(CENoDefaultLib)" /out:"ARMRel/Media Renderer.exe" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+
+!ELSEIF  "$(CFG)" == "Renderer - Win32 (WCE ARM) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMDbg"
+# PROP BASE Intermediate_Dir "ARMDbg"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMDbg"
+# PROP Intermediate_Dir "ARMDbg"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /I "..\PocketPC_MmrRslMp" /I "..\DeviceBuilder\PocketPC" /I "..\\" /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_M3U_BUFFER" /FR /M$(CECrtMTDebug) /c
+# SUBTRACT CPP /YX
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib aygshell.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib aygshell.lib atlce300.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"$(CENoDefaultLib)" /out:"ARMDbg/Media Renderer.exe" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+
+!ENDIF 
+
+# Begin Target
+
+# Name "Renderer - Win32 (WCE ARM) Release"
+# Name "Renderer - Win32 (WCE ARM) Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=.\CMicroMediaRenderer.cpp
+DEP_CPP_CMICR=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\MediaPlayerVersions_Methods.h"\
+	"..\MicroMediaRenderer.h"\
+	".\CMicroMediaRenderer.h"\
+	".\events_dispid.h"\
+	".\PlayerOCX.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_CMICR=\
+	"..\mediaplayer1.h"\
+	
+# ADD CPP /D "MICROSTACK_NO_STDAFX"
+# End Source File
+# Begin Source File
+
+SOURCE=..\HttpPlaylistParser.c
+DEP_CPP_HTTPP=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	"..\HttpPlaylistParser.h"\
+	
+# ADD CPP /D "MICROSTACK_NO_STDAFX"
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.c
+DEP_CPP_ILIBA=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibAsyncSocket.c
+DEP_CPP_ILIBAS=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibHTTPClient.c
+DEP_CPP_ILIBH=\
+	"..\DeviceBuilder\PocketPC\ILibHTTPClient.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibParsers.c
+DEP_CPP_ILIBP=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	
+# ADD CPP /D "MICROSTACK_NO_STDAFX"
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibWebClient.c
+DEP_CPP_ILIBW=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibWebServer.c
+DEP_CPP_ILIBWE=\
+	"..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibAsyncSocket.h"\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebServer.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=..\MediaPlayerVersions_Methods.cpp
+DEP_CPP_MEDIA=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	"..\HttpPlaylistParser.h"\
+	"..\MediaPlayerVersions_Methods.h"\
+	"..\MicroMediaRenderer.h"\
+	"..\MyString.h"\
+	"..\RendererStateLogic.h"\
+	".\PlayerOCX.h"\
+	".\StdAfx.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\mediaplayer1.h"\
+	
+# ADD CPP /D "MICROSTACK_NO_STDAFX"
+# End Source File
+# Begin Source File
+
+SOURCE=..\MicroMediaRenderer.c
+DEP_CPP_MICRO=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	"..\MicroMediaRenderer.h"\
+	
+# ADD CPP /D "MICROSTACK_NO_STDAFX"
+# End Source File
+# Begin Source File
+
+SOURCE=.\MicroMediaRendererApp.cpp
+DEP_CPP_MICROM=\
+	".\CMicroMediaRenderer.h"\
+	".\events_dispid.h"\
+	".\PlayerOCX.h"\
+	".\StdAfx.h"\
+	
+# ADD CPP /D "MICROSTACK_NO_STDAFX"
+# End Source File
+# Begin Source File
+
+SOURCE=..\MyString.c
+DEP_CPP_MYSTR=\
+	"..\MyString.h"\
+	
+# ADD CPP /D "MICROSTACK_NO_STDAFX"
+# End Source File
+# Begin Source File
+
+SOURCE=..\RendererStateLogic.c
+DEP_CPP_RENDE=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	"..\MicroMediaRenderer.h"\
+	"..\RendererStateLogic.h"\
+	
+# ADD CPP /D "MICROSTACK_NO_STDAFX"
+# End Source File
+# Begin Source File
+
+SOURCE=.\stdafx.cpp
+DEP_CPP_STDAF=\
+	".\StdAfx.h"\
+	
+# ADD CPP /D "MICROSTACK_NO_STDAFX"
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\UpnpMicroStack.c
+DEP_CPP_UPNPM=\
+	"..\DeviceBuilder\PocketPC\ILibParsers.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebClient.h"\
+	"..\DeviceBuilder\PocketPC\ILibWebServer.h"\
+	"..\DeviceBuilder\PocketPC\stdafx.h"\
+	"..\DeviceBuilder\PocketPC\UpnpMicroStack.h"\
+	
+# ADD CPP /D "MICROSTACK_NO_STDAFX"
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=.\CMicroMediaRenderer.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\events_dispid.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\HttpPlaylistParser.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibAsyncServerSocket.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibAsyncSocket.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibHTTPClient.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibParsers.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibWebClient.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\ILibWebServer.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\MediaPlayerVersions_Methods.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\MicroMediaRenderer.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\MyString.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\newres.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\PlayerOCX.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\RendererStateLogic.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\resource.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\StdAfx.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeviceBuilder\PocketPC\UpnpMicroStack.h
+# End Source File
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+# Begin Source File
+
+SOURCE=.\icon1.ico
+# End Source File
+# Begin Source File
+
+SOURCE=".\Intel Logo.bmp"
+# End Source File
+# Begin Source File
+
+SOURCE=.\IntelLogo.bmp
+# End Source File
+# Begin Source File
+
+SOURCE=.\IntelLogo2.bmp
+# End Source File
+# Begin Source File
+
+SOURCE=.\IntelLogo3.bmp
+# End Source File
+# Begin Source File
+
+SOURCE=.\IntelLogo4.bmp
+# End Source File
+# Begin Source File
+
+SOURCE=".\Micro Media Renderer PPC.ico"
+# End Source File
+# Begin Source File
+
+SOURCE=.\MicroMediaRendererApp.rc
+# End Source File
+# End Group
+# Begin Source File
+
+SOURCE=.\winsock_arm.lib
+# End Source File
+# Begin Source File
+
+SOURCE=.\winsock_x86.lib
+# End Source File
+# End Target
+# End Project

@@ -1,0 +1,49 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnP", "..\..\Global\UPnP\UPnP.csproj", "{584ED187-8F2A-4B58-A266-85F3F212B092}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPNPAV_RendererStack", "..\..\Global\UPNPAV_RendererStack\UPNPAV_RendererStack.csproj", "{E01B6019-ACC6-40A6-A511-48D285D51C40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPNPAVCDSML", "..\..\Global\UPNPAVCDSML\UPNPAVCDSML.csproj", "{8EA0E595-45EC-40C1-82CE-269F4FA9EBB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPNPAVMSCP", "..\..\Global\UPNPAVMSCP\UPNPAVMSCP.csproj", "{8901DF28-45ED-4BC5-8972-AE463A68E756}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnPAV", "..\..\Global\UPNP_AV\UPnPAV.csproj", "{B2439738-5F46-4E59-95A1-92C3DF38696F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVMediaController", "AVMediaController.csproj", "{65616030-E832-4CE1-AA2D-5DE7B8A9B4A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Debug|x86.ActiveCfg = Debug|x86
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Debug|x86.Build.0 = Debug|x86
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Release|x86.ActiveCfg = Release|x86
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Release|x86.Build.0 = Release|x86
+		{E01B6019-ACC6-40A6-A511-48D285D51C40}.Debug|x86.ActiveCfg = Debug|x86
+		{E01B6019-ACC6-40A6-A511-48D285D51C40}.Debug|x86.Build.0 = Debug|x86
+		{E01B6019-ACC6-40A6-A511-48D285D51C40}.Release|x86.ActiveCfg = Release|x86
+		{E01B6019-ACC6-40A6-A511-48D285D51C40}.Release|x86.Build.0 = Release|x86
+		{8EA0E595-45EC-40C1-82CE-269F4FA9EBB3}.Debug|x86.ActiveCfg = Debug|x86
+		{8EA0E595-45EC-40C1-82CE-269F4FA9EBB3}.Debug|x86.Build.0 = Debug|x86
+		{8EA0E595-45EC-40C1-82CE-269F4FA9EBB3}.Release|x86.ActiveCfg = Release|x86
+		{8EA0E595-45EC-40C1-82CE-269F4FA9EBB3}.Release|x86.Build.0 = Release|x86
+		{8901DF28-45ED-4BC5-8972-AE463A68E756}.Debug|x86.ActiveCfg = Debug|x86
+		{8901DF28-45ED-4BC5-8972-AE463A68E756}.Debug|x86.Build.0 = Debug|x86
+		{8901DF28-45ED-4BC5-8972-AE463A68E756}.Release|x86.ActiveCfg = Release|x86
+		{8901DF28-45ED-4BC5-8972-AE463A68E756}.Release|x86.Build.0 = Release|x86
+		{B2439738-5F46-4E59-95A1-92C3DF38696F}.Debug|x86.ActiveCfg = Debug|x86
+		{B2439738-5F46-4E59-95A1-92C3DF38696F}.Debug|x86.Build.0 = Debug|x86
+		{B2439738-5F46-4E59-95A1-92C3DF38696F}.Release|x86.ActiveCfg = Release|x86
+		{B2439738-5F46-4E59-95A1-92C3DF38696F}.Release|x86.Build.0 = Release|x86
+		{65616030-E832-4CE1-AA2D-5DE7B8A9B4A9}.Debug|x86.ActiveCfg = Debug|x86
+		{65616030-E832-4CE1-AA2D-5DE7B8A9B4A9}.Debug|x86.Build.0 = Debug|x86
+		{65616030-E832-4CE1-AA2D-5DE7B8A9B4A9}.Release|x86.ActiveCfg = Release|x86
+		{65616030-E832-4CE1-AA2D-5DE7B8A9B4A9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

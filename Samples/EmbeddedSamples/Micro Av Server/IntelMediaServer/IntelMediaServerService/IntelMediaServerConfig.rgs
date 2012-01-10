@@ -1,0 +1,24 @@
+HKCR
+{
+	IntelMediaServerService.IntelMediaSer.1 = s 'IntelMediaServerConfig Class'
+	{
+		CLSID = s '{8A879A58-EE07-4F3D-B92D-3BE14C9C541A}'
+	}
+	IntelMediaServerService.IntelMediaServe = s 'IntelMediaServerConfig Class'
+	{
+		CLSID = s '{8A879A58-EE07-4F3D-B92D-3BE14C9C541A}'
+		CurVer = s 'IntelMediaServerService.IntelMediaSer.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8A879A58-EE07-4F3D-B92D-3BE14C9C541A} = s 'IntelMediaServerConfig Class'
+		{
+			ProgID = s 'IntelMediaServerService.IntelMediaSer.1'
+			VersionIndependentProgID = s 'IntelMediaServerService.IntelMediaServe'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{D4AC20C2-5187-4CC3-A907-313F18E17019}'
+		}
+	}
+}

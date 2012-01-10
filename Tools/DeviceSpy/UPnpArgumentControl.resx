@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+            Microsoft ResX Schema 
+        
+            Version 1.3
+                
+            The primary goals of this format is to allow a simple XML format 
+            that is mostly human readable. The generation and parsing of the 
+            various data types are done through the TypeConverter classes 
+            associated with the data types.
+        
+            Example:
+        
+                ... ado.net/XML headers & schema ...
+                <resheader name="resmimetype">text/microsoft-resx</resheader>
+                <resheader name="version">1.3</resheader>
+                <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+                <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+                <data name="Name1">this is my long string</data>
+                <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+                <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+                    [base64 mime encoded serialized .NET Framework object]
+                </data>
+                <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+                    [base64 mime encoded string representing a byte array form of the .NET Framework object]
+                </data>
+        
+            There are any number of "resheader" rows that contain simple 
+            name/value pairs.
+            
+            Each data row contains a name, and value. The row also contains a 
+            type or mimetype. Type corresponds to a .NET class that support 
+            text/value conversion through the TypeConverter architecture. 
+            Classes that don't support this are serialized and stored with the 
+            mimetype set.
+                     
+            The mimetype is used for serialized objects, and tells the 
+            ResXResourceReader how to depersist the object. This is currently not 
+            extensible. For a given mimetype the value must be set accordingly:
+        
+            Note - application/x-microsoft.net.object.binary.base64 is the format 
+                   that the ResXResourceWriter will generate, however the reader can 
+                   read any of the formats listed below.
+        
+            mimetype: application/x-microsoft.net.object.binary.base64
+            value   : The object must be serialized with 
+                    : System.Serialization.Formatters.Binary.BinaryFormatter
+                    : and then encoded with base64 encoding.
+        
+            mimetype: application/x-microsoft.net.object.soap.base64
+            value   : The object must be serialized with 
+                    : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+                    : and then encoded with base64 encoding.
+            mimetype: application/x-microsoft.net.object.bytearray.base64
+            value   : The object must be serialized into a byte array 
+                    : using a System.ComponentModel.TypeConverter
+                    : and then encoded with base64 encoding.
+        -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </data>
+  <data name="toolTip.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 17</value>
+  </data>
+  <data name="argValueTextBox.TabIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>5</value>
+  </data>
+  <data name="$this.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left</value>
+  </data>
+  <data name="&gt;&gt;actionNameLabel.Type">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="argValueComboBox.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="panel1.AutoScrollMargin" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="sendToNotepadMenuItem.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argDirPictureBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="actionNameLabel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="argValueTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="sizeContextMenu.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>232, 17</value>
+  </data>
+  <data name="&gt;&gt;sendToNotepadMenuItem.Type">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="sizeContextMenu.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>No</value>
+  </data>
+  <data name="argValueTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="panel1.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="sendToNotepadMenuItem.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="argValueTextBox.PasswordChar" type="System.Char, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="menuItem4.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argValueComboBox.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>192, 4</value>
+  </data>
+  <data name="actionNameLabel.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;argDirPictureBox.Parent">
+    <value>panel1</value>
+  </data>
+  <data name="argValueTextBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Left</value>
+  </data>
+  <data name="sendToNotepadMenuItem.Text">
+    <value>Send Value to Notepad</value>
+  </data>
+  <data name="&gt;&gt;actionNameLabel.ZOrder">
+    <value>2</value>
+  </data>
+  <data name="actionNameLabel.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Type">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="argValueTextBox.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="sendToExplorerMenuItem.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;argValueComboBox.ZOrder">
+    <value>1</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;actionNameLabel.Name">
+    <value>actionNameLabel</value>
+  </data>
+  <data name="$this.TabIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;actionNameLabel.Parent">
+    <value>panel1</value>
+  </data>
+  <data name="panel1.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;menuItem3.Name">
+    <value>menuItem3</value>
+  </data>
+  <data name="argValueTextBox.AutoSize" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argDirPictureBox.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argValueComboBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="&gt;&gt;actionImageList.Name">
+    <value>actionImageList</value>
+  </data>
+  <data name="argValueComboBox.MaxLength" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>0</value>
+  </data>
+  <data name="actionNameLabel.AutoSize" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </data>
+  <data name="argValueTextBox.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>192, 20</value>
+  </data>
+  <data name="&gt;&gt;argValueTextBox.Name">
+    <value>argValueTextBox</value>
+  </data>
+  <data name="sendToExplorerMenuItem.Text">
+    <value>Send Value to Explorer</value>
+  </data>
+  <data name="panel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="actionNameLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>TopLeft</value>
+  </data>
+  <data name="actionNameLabel.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>48, 8</value>
+  </data>
+  <data name="menuItem2.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="menuItem3.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="argValueTextBox.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argValueTextBox.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="menuItem1.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="$this.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;menuItem1.Type">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem4.Name">
+    <value>menuItem4</value>
+  </data>
+  <data name="menuItem2.Text">
+    <value>Set 3 Line View</value>
+  </data>
+  <data name="menuItem2.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="argValueComboBox.TabIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;argValueTextBox.Type">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="argValueComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="argValueComboBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="argDirPictureBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="argValueTextBox.WordWrap" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="panel1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="argDirPictureBox.Text">
+    <value />
+  </data>
+  <data name="menuItem4.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="panel1.AutoScroll" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;menuItem7.Name">
+    <value>menuItem7</value>
+  </data>
+  <data name="menuItem4.Text">
+    <value>Set Large View</value>
+  </data>
+  <data name="argValueTextBox.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>192, 4</value>
+  </data>
+  <data name="&gt;&gt;menuItem2.Name">
+    <value>menuItem2</value>
+  </data>
+  <data name="&gt;&gt;menuItem3.Type">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left</value>
+  </data>
+  <data name="menuItem3.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argValueComboBox.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argDirPictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="argDirPictureBox.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>4, 4</value>
+  </data>
+  <data name="argValueTextBox.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argDirPictureBox.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;sendToNotepadMenuItem.Name">
+    <value>sendToNotepadMenuItem</value>
+  </data>
+  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>French</value>
+  </data>
+  <data name="argValueComboBox.MaxDropDownItems" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>8</value>
+  </data>
+  <data name="actionNameLabel.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="panel1.Text">
+    <value />
+  </data>
+  <data name="menuItem4.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="menuItem3.Text">
+    <value>Set Paragraph View</value>
+  </data>
+  <data name="argValueTextBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="&gt;&gt;sizeContextMenu.Name">
+    <value>sizeContextMenu</value>
+  </data>
+  <data name="sendToExplorerMenuItem.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="$this.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argDirPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Normal</value>
+  </data>
+  <data name="argDirPictureBox.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="sendToNotepadMenuItem.ShowShortcut" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="$this.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="argValueTextBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="argDirPictureBox.TabIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>3</value>
+  </data>
+  <data name="sendToExplorerMenuItem.ShowShortcut" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="panel1.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="actionNameLabel.Text">
+    <value>actionName</value>
+  </data>
+  <data name="argValueComboBox.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>192, 21</value>
+  </data>
+  <data name="&gt;&gt;argDirPictureBox.Name">
+    <value>argDirPictureBox</value>
+  </data>
+  <data name="argValueComboBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="actionNameLabel.ToolTip">
+    <value />
+  </data>
+  <data name="argValueComboBox.ItemHeight" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>13</value>
+  </data>
+  <data name="menuItem7.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="actionNameLabel.TabIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>4</value>
+  </data>
+  <data name="argDirPictureBox.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>48, 24</value>
+  </data>
+  <data name="&gt;&gt;sendToExplorerMenuItem.Type">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="argValueTextBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="&gt;&gt;$this.Type">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="$this.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="actionNameLabel.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;argDirPictureBox.Type">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder">
+    <value>0</value>
+  </data>
+  <data name="argValueTextBox.MaxLength" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>32767</value>
+  </data>
+  <data name="&gt;&gt;menuItem1.Name">
+    <value>menuItem1</value>
+  </data>
+  <data name="&gt;&gt;actionImageList.Type">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="panel1.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name">
+    <value>panel1</value>
+  </data>
+  <data name="argValueTextBox.ToolTip">
+    <value />
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>392, 32</value>
+  </data>
+  <data name="actionNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="menuItem7.Text">
+    <value>-</value>
+  </data>
+  <data name="menuItem4.ShowShortcut" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoScrollMargin" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="actionNameLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Fill</value>
+  </data>
+  <data name="actionImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFpTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0xLjAuMzMw
+        MC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZT
+        eXN0ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMA
+        AAA6EwAAAk1TRnQBSQFMAgEBAwEAAQUBAAEEAQABKQEAARIBAAT/ARkBEAj/AUIBTQE2BwABNgMAASgD
+        AAGkAwABJAMAAQEBAAEYBQABMAFF/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/
+        AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AA8AA/0D9APjA9cD1QPcA+UD7wP4YwAD9APjA9cD
+        1QPcA+UD7wP4NgAB8QH7AfIB9QH8AfYkAAP9A/QD4wPXA9UD3APlA+8D+LoAAeoB+QHrAcIB7QHGFQAD
+        +wPuA9kDuwOXA30DegOIA5oDrQPDA9gD6gP3LQAB8QH7AfIB9QH8AfYeAAP7A+4D2QO7A5cDfQN6A4gD
+        mgOtA8MD2APqA/cnAAHxAfsB8gGfAeMBpQFNAcsBWAHdAfUB4B4AA/sD7gPZA7sDlwN9A3oDiAOaA60D
+        wwPYA+oD97EAAd0B9QHgAUMByAFPAWQB0gFuAcIB7QHGCQAD+APpA9ADrQN4A0gCSQFLAmEBYgJRAVMC
+        RAFFA1IDXANtA4UDpAPDA90D8gP8HgAB8QH7AfIBnwHjAaUBTQHLAVgB3QH1AeAYAAP4A+kD0AOtA3gD
+        SAJJAUsCYQFiAlEBUwJEAUUDUgNcA20DhQOkA8MD3QPyA/wYAAHxAfsB8gGfAeMBpQFNAcsBWAFDAcgB
+        TwFDAcgBTwHdAfUB4BgAA/gD6QPQA60DeANIAkkBSwJhAWICUQFTAkQBRQNSA1wDbQOFA6QDwwPdA/ID
+        /KgAAd0B9QHgAUMByAFPAUMByAFPAUMByAFPAWMB0QFtAbUB4wG5A+ADxQOhA2MDVQOdAYgBhwGIA48D
+        bANmBoIBfAJ7A2ABVgJUAlsBWgNvA48DtgPaA/QVAAHxAfsB8gGfAeMBpQFNAcsBWAFDAcgBTwFDAcgB
+        TwHdAfUB4A8AA/wD8gPgA8UDoQNjA1UDnQGIAYcBiAOPA2wDZgaCAXwCewNgAVYCVAJbAVoDbwOPA7YD
+        2gP0DwAB8QH7AfIBnwHjAaUBTQHLAVgBQwHIAU8BQwHIAU8BQwHIAU8BQwHIAU8BnwHjAaUBswHpAbgB
+        swHpAbgBswHpAbgBswHpAbgBswHpAbgBsQHnAbYBqwHgAbABnwHUAaMBjAHCAZEBiQGmAYsDYwNVA50B
+        iAGHAYgDjwNsA2YGggF8AnsDYAFWAlQCWwFaA28DjwO2A9oD9IQAAcsB8AHOAY4B3gGVAY4B3gGVAY4B
+        3gGVAY4B3gGVAY4B3gGVAY4B3gGVAY4B3gGVAY4B3gGVAY4B3gGVAY4B3gGVAYAB2gGIAUMByAFPAUIB
+        xwFOAT8BxAFLATsBwAFHATUBugFBAT8BrAFJAUUBcwFJA3wDtQPdA9cBgwKCA4QMMwNBA10CegF5AYYC
+        hQFrAWoBaQNZA2gDjgO+A+UD+QkAAfEB+wHyAZ8B4wGlAU0BywFYAUMByAFPAUMByAFPAUMByAFPAUMB
+        yAFPAZ8B4wGlAbMB6QG4AbMB6QG4AbMB6QG4AbEB5gG2AacB3QGsAZgBzQGdAYMBuAGIAWcBnQFsAUIB
+        eAFHAWoBhwFtA7UD3QPXAYMCggOEDDMDQQNdAnoBeQGGAoUBawFqAWkDWQNoA44DvgPlA/kDAAHxAfsB
+        8gGfAeMBpQFNAcsBWAFDAcgBTwFDAcgBTwFDAcgBTwFDAcgBTwFDAcgBTwFDAcgBTwFDAcgBTwFDAcgB
+        TwFDAcgBTwFDAcgBTwFCAccBTgE/AcQBSwE7AcABRwE1AboBQQEtAbMBOgEjAagBLwFPAZgBVgO1A90D
+        1wGDAoIDhAwzA0EDXQJ6AXkBhgKFAWsBagFpA1kDaAOOA74D5QP5fgABqQHmAa8BQwHIAU8BQwHIAU8B
+        QwHIAU8BQwHIAU8BQwHIAU8BQwHIAU8BQwHIAU8BQwHIAU8BQwHIAU8BQgHIAU8BQQHGAU0BPgHDAUoB
+        OQG/AUYBMwG4AT8BKQGuATUBJAGpATABLgGzAToBOQG+AUUBWQHGAWMBqAHPAawDoANnAXICcQOJFTMD
+        OwNoAYkCiAF6AXkBeANWA3ADoQPWA/cB8QH7AfIBnwHjAaUBTQHLAVgBQwHIAU8BQwHIAU8BQwHIAU8B
+        QwHIAU8BQwHIAU8BQwHIAU8BQwHIAU8BQgHIAU8BQQHGAU0BPgHDAUoBOQG/AUYBMwG4AT8BKQGuATUB
+        JAGpATABLgGzAToBOQG+AUUBhQHNAYsD1QOgA2cBcgJxA4kVMwM7A2gBiQKIAXoBeQF4A1YDcAOhA9YD
+        9wHIAe8BzAFkAdIBbgFDAcgBTwFDAcgBTwFDAcgBTwFDAcgBTwFDAcgBTwFDAcgBTwFDAcgBTwFDAcgB
+        TwFCAcgBTwFBAcYBTQE+AcMBSgE5Ab8BRgEzAbgBPwEpAa4BNQEkAakBMAEmAbgBNAEkAb0BMgFAAcQB
+        TAGqAdEBrgOgA2cBcgJxA4kVMwM7A2gBiQKIAXoBeQF4A1YDcAOhA9YD93sAAakB5gGvAUMByAFPAUMB
+        yAFPAUMByAFPAUMByAFPAUMByAFPAUMByAFPAUMByAFPAUMByAFPAUMByAFPAUABxQFMATkBvgFFATEB
+        tgE9AScBrAEzASkBrgE1ATIBtwE+ATwBwQFIATwBwQFIAT8BvQFKAVQBmQFbAV0BZgFeA4QDqQGSApED
+        lB4zA2gClwGWA24DXgOXA9wByAHvAcwBZAHSAW4BQwHIAU8BQwHIAU8BQwHIAU8BQwHIAU8BQwHIAU8B
+        QwHIAU8BQwHIAU8BQwHIAU8BQAHFAUwBOQG+AUUBMQG2AT0BJwGsATMBKQGuATUBMgG3AT4BPAHBAUgB
+        PAHBAUgBNwG8AUMBUQGaAVgDYQOEA6kBkgKRA5QeMwNoApcBlgNuA14DlwPcBgABvgHsAcMBZAHSAW4B
+        QwHIAU8BQwHIAU8BQwHIAU8BQwHIAU8BQwHIAU8BgAHaAogB1wGPAXMBwwF7AV0BrQFkAUIBkQFJAUcB
+        lwFPAWABsAFoAX0BzAGEAVMBxgFdAToBwQFGAUABugFLAVgBfwFcA4QDqQGSApEDlB4zA2gClwGWA24D
+        XgOXA9x7AAHdAfUB4AGzAekBuAGzAekBuAGzAekBuAGzAekBuAGzAekBuAGzAekBuAGzAekBuAGzAekB
+        uAGzAekBuAGQAcYBlQFRAZUBVwEsAbEBOAE3Ab0BRAE8AcEBSAE6Ab8BRgE3AbUBQgFJAY0BTwFvAXgB
+        bwOlA7cDrwOpAZgClwOfA5kDiwNzA1MDOxIzAzsDiQOPA20DwQYAAb4B7AHDAWQB0gFuAUMByAFPAUMB
+        yAFPAUMByAFPAUMByAFPAUMByAFPAYAB2gGIAXMBwwF7AUoBmgJRAaEBWAFvAb8BdwF9AcwBhAF2AcUB
+        fQFeAa4BZQFDAZIBSgFHAZcBTgGAAasBhAO3A68DqQGYApcDnwOZA4sDcwNTAzsSMwM7A4kDjwNtA8EM
+        AAG+AewBwwFkAdIBbgFDAcgBTwFDAcgBTwFDAcgBTwHdAfUB4APLA3oDiAPDA90DzwOhAVcBnAFdAUwB
+        uAFWAVUBwQFfAZUBvAGYA68DqQGYApcDnwOZA4sDcwNTAzsSMwM7A4kDjwNtA8GZAAOLAbkB0QG8ATwB
+        wQFIATUBugFBATEBrwE8AVMBlwFZAY0BlgGOA7oDtQOsA6gDsQPRA+kCzgHNA7cDsQKpBKgDswOnA34D
+        Xg8zA6kDeAO4DAABvgHsAcMBZAHSAW4BQwHIAU8BQwHIAU8BQwHIAU8B3QH1AeADiwPVA9wDuAOGA30D
+        lAO6A7UDrAOoA7ED0QPpAs4BzQO3A7ECqQSoA7MDpwN+A14PMwOpA3gDuBIAAb4B7AHDAWQB0gFuAUMB
+        yAFPAd0B9QHgA4sD1QPcA7gDhgN9A5QBfAHBAYMBWAHEAWIBVwHDAWEBigGxAY4DsQPRA+kCzgHNA7cD
+        sQKpBKgDswOnA34DXg8zA6kDeAO4mQADjwGLAaMBjQEuAawBOgFdAaEBYwGnAbEBqAO5A7EDqwOwA8UD
+        4QPtA+QD4APeA9wD2wPaA9QDyAO9A7cBugK7AbUCtgOMA1cGMwOUA3sDuBIAAb4B7AHDAWQB0gFuAUMB
+        yAFPAd0B9QHgA48DnwN7A44DsAO5A7EDqwOwA8UD4QPtA+QD4APeA9wD2wPaA9QDyAO9A7cBugK7AbUC
+        tgOMA1cGMwOUA3sDuBgAAb4B7AHDAeoB+QHrA48DnwN7A44DsAO5A7EBdQG6AXsBWAHDAWEBWwHHAWUB
+        swHaAbYD7QPkA+AD3gPcA9sD2gPUA8gDvQO3AboCuwG1ArYDjANXBjMDlAN7A7iZAAN9AaQBqwGkAbIB
+        vAGzA7cDsAOuA8MD2wPuA+0D6QPmA+UD4wPhA+AD3wPcA9sD2gPXA9YD0gPJAcUCxgHIAskDowNZA4gB
+        fgJ/A7wYAAG+AewBwwHqAfkB6wN9A6oDvAO3A7ADrgPDA9sD7gPtA+kD5gPlA+MD4QPgA98D3APbA9oD
+        1wPWA9IDyQHFAsYByALJA6MDWQOIAX4CfwO8HgADfQOqA7wDtwOwA64DwwGMAdEBkwFjAc8BbQFjAc8B
+        bQG4Ad8BvAPmA+UD4wPhA+AD3wPcA9sD2gPXA9YD0gPJAcUCxgHIAskDowNZA4gBfgJ/A7yZAAOPA7UD
+        rQPAA9QD7QbxA/AD7gPsA+sD6gPnA+UD5APhA+AD3wPdA9sD2gPYA9YD1QHRAtIBzwLQAdIB0wHUAtAB
+        0QGdAZ4BnwPSHgADjwO1A60DwAPUA+0G8QPwA+4D7APrA+oD5wPlA+QD4QPgA98D3QPbA9oD2APWA9UB
+        0QLSAc8C0AHSAdMB1ALQAdEBnQGeAZ8D0h4AA48DtQOtA8AD1APtA/EBlwHcAZ0BZAHQAW0BYwHPAW0B
+        ugHhAb4D6wPqA+cD5QPkA+ED4APfA90D2wPaA9gD1gPVAdEC0gHPAtAB0gHTAdQC0AHRAZ0BngGfA9KZ
+        AAOSA8oD5wPzA/oD+AP2A/UD9APxA/AD7wPsA+sD6gPnA+UD5APiA+AD3wPdA9sD2gPYA9YD1QLUAdUB
+        sAGyAbMD0QPxHgADkgPKA+cD8wP6A/gD9gP1A/QD8QPwA+8D7APrA+oD5wPlA+QD4gPgA98D3QPbA9oD
+        2APWA9UC1AHVAbABsgGzA9ED8R4AA5IDygPnA/MD+gP4A/YBmQHeAZ8BZAHQAW4BZAHQAW0BvQHkAcED
+        7wPsA+sD6gPnA+UD5APiA+AD3wPdA9sD2gPYA9YD1QLUAdUBsAGyAbMD0QPxmQADvgO/A84D9QP9A/sD
+        +gP5A/YD9QP0A/ED8APvA+0D6wPqA+cD5QPkA+ID4APfA90DvAOhA5gDqwPkA/ohAAO+A78DzgP1A/0D
+        +wP6A/kD9gP1A/QD8QPwA+8D7QPrA+oD5wPlA+QD4gPgA98D3QO8A6EDmAOrA+QD+iEAA74DvwPOA/UD
+        /QP7A/oBmwHgAaEBZQHRAW4BZQHQAW4BwAHnAcMD8QPwA+8D7QPrA+oD5wPlA+QD4gPgA98D3QO8A6ED
+        mAOrA+QD+qIAA/QDvwO9A74D1gP7A/oD+QP3A/UD9APyA/AD7wPtA+sD6gPnA9oGpQOoA9QD9zMAA/QD
+        vwO9A74D1gP7A/oD+QP3A/UD9APyA/AD7wPtA+sD6gPnA9oGpQOoA9QD9zMAA/QDvwO9A74D1gGcAeEB
+        ogFlAdEBbwFlAdEBbwHCAekBxgP1A/QD8gPwA+8D7QPrA+oD5wPaBqUDqAPUA/e6AAPeBroDtAPlA/kD
+        9wP1A/QD8gPwA8UDpgOhA68D8gP7SAAD3ga6A7QD5QP5A/cD9QP0A/ID8APFA6YDoQOvA/ID+0gAA94G
+        ugO0A+UD+QP3A/UD9APyA/ADxQOmA6EDrwPyA/vPAAPSA68DrAPFA7cDqwOmA9cD92AAA9IDrwOsA8UD
+        twOrA6YD1wP3YAAD0gOvA6wDxQO3A6sDpgPXA/fkAAPzeAAD83gAA/OuAAFCAU0BPgcAAT4DAAEoAwAB
+        pAMAASQDAAEBAQABAQUAAWABAxYAA///ALIAAv8B/AEBBP8BAAL/Ac8B/wEAAX8B4AgAAf8B5wHwAQAB
+        PwH/AZ8B+AEAAR8B/wEPAfwBAAEPAeAIAAH/AeEBwAEAAQcB/gEfAeABAAEDAfwBDwHwAQABAQHgCAAB
+        /wHgAgABAwH4AR8CAAEBAfAEAAHgDQAB4AQAAUAEAAEgKgABMBIAAWAEAAE8DQAB/wHAAwABeAQAAT8N
+        AAH/AcADAAF+BAABPwHADAAB/wHAAwABfwGAAwABPwHwDAAB/wHAAwABfwHgAwABPwHwDAAB/wHAAwAB
+        fwHgAwABPwHwDAAB/wHAAwAB/wHgAwABfwHwAwABIAgAAf8B8AIAAQ8B/wH4AgABBwH/AfwCAAEDAeAI
+        AAL/AgABfwL/AYABAAE/Av8BwAEAAR8B4AgAAv8B8AEHA/8B+AEDA/8B/AEBAf8B4AgAAv8B/gX/AX8E
+        /wG/Af8B4B4ACw==
+</value>
+  </data>
+  <data name="menuItem3.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argDirPictureBox.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="argValueComboBox.ToolTip">
+    <value />
+  </data>
+  <data name="$this.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="argValueTextBox.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="actionNameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Top, Left</value>
+  </data>
+  <data name="actionImageList.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </data>
+  <data name="argValueTextBox.Text">
+    <value />
+  </data>
+  <data name="$this.Name">
+    <value>UPnpArgumentControl</value>
+  </data>
+  <data name="argDirPictureBox.ToolTip">
+    <value />
+  </data>
+  <data name="&gt;&gt;menuItem4.Type">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="&gt;&gt;argDirPictureBox.ZOrder">
+    <value>3</value>
+  </data>
+  <data name="menuItem1.ShowShortcut" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argDirPictureBox.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="argDirPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="menuItem7.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="actionImageList.ImageSize" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>41, 18</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>392, 32</value>
+  </data>
+  <data name="menuItem1.Text">
+    <value>Set Single Line View</value>
+  </data>
+  <data name="actionNameLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="&gt;&gt;menuItem7.Type">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel1.ToolTip">
+    <value />
+  </data>
+  <data name="argDirPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhKQASAPcAAIiHiFRUVnt7fHFxcpeXmJGRkoiIiYWFhoKCg3h5emlqa3l6elpbW83OzqipqZaX
+        l294b6SrpOv56jCpJDOsJzWuKTixLDqzLj22MTqsLj63Mj+4MzyvMUG6NUS9N0a/OUW+OUa/OkK1N0fA
+        O0jBPErDPkvEP0zFQE/IQk7HQk3GQU/IQ0q9P0msP2PGWW7SZG3RY0+NSVeVUVuZVFmXU2OhXYjagElz
+        RZXejpXGkK/mqbjps7njtcbtws7wy42ji6ixp7O8sqzPqF5mXY6WjbzRueD13X9/ftLS0dDQz8nJyMbG
+        xbu7ura2tbOysJ+endTT0lNRUUtJSUVERGJhYdXU1NHQ0P39/fz8/Pv7+/r6+vn5+fj4+Pf39/b29vX1
+        9fT09PPz8/Ly8vHx8fDw8O/v7+7u7u3t7ezs7Ovr6+rq6unp6efn5+bm5uXl5eTk5OPj4+Li4uHh4eDg
+        4N/f397e3t3d3dzc3Nvb29ra2tnZ2djY2NfX19bW1tXV1dTU1NLS0tHR0dDQ0M7OzsrKysnJycjIyMXF
+        xcPDw8HBwcDAwL+/v76+vr29vby8vLu7u7q6urm5ubi4uLe3t7a2trW1tbS0tLOzs7GxsbCwsK+vr66u
+        rq2traysrKurq6mpqaioqKenp6ampqWlpaSkpKOjo6GhoaCgoJ+fn52dnZqampmZmZiYmJeXl5SUlJKS
+        ko+Pj46OjoyMjIuLi4mJiYiIiIWFhYSEhIKCgn5+fn19fXx8fHt7e3p6enh4eHNzc3BwcG9vb25ubm1t
+        bWxsbGhoaGdnZ2ZmZmNjY2BgYF5eXl1dXVxcXFlZWVdXV1ZWVlVVVVNTU1JSUkhISEFBQTs7OzMzM///
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ACH5BAEAANcALAAAAAApABIAAAj/AK8JHEiwoEGBYQ4qXMhwICBNnQ5N8iSKT5eGGAvWgQTJkpstXb6A
+        EUPmkChTmsRkyXgQzKJGjPpk0QJSJMkyZ9KoYZNn1ChQfy6yZLRo0JcrM7d4ETmGDE6dbNy8iTOHjh1H
+        plh5eqOl4StCbMJo4bIUTNMyaKBKpWoVT549ffxUcRJoDENYlTgp+nNmTFMzaXdKlVPVjlu4fpAkgWLl
+        CSCGuiIEmZRpEyI8Zs6saeMGDmE6d9zy6QOo0BIlpZrVOuLo7o8MNYBEwuQp0yE5Z97MqRM6zx9DjSYx
+        aSLLmTVrrnhJYjirCIkOHGgQgVSpEyhMgdY0mITJAahLoXIp/ztO/pMvSUZ2qF+/PocMCx5IhBARA8Ko
+        SZo+EUC1atavaNWQR141tMAyTCI6rKDgggueAAIGFFSgAQkksDDDELd8UoArAnZoTTEPCKNMK3ckyCCD
+        KKhQwgcbVDDBBSC4IMQpxgxAi4fWVFOMAQk8A4wpfXThAw5EFmmkDSukYMIIHbRwwy6V2MEHArcISM0y
+        CxygQDPFxMLIRxgZsSAMPMxxiCnIQJMKALAQcwwuuAiQTAAMBAMLJXmAwZKYL/QwEBdrCMKJL9NIQUUU
+        U0jDzDC2kIKIHWJgwdI1EvhpUBZm6PFIK7r0UosqnCCyhxpCTYrRFWDAwYcfd7hRBhcMBQEEADs=
+</value>
+  </data>
+  <data name="&gt;&gt;sendToExplorerMenuItem.Name">
+    <value>sendToExplorerMenuItem</value>
+  </data>
+  <data name="argValueComboBox.Text">
+    <value />
+  </data>
+  <data name="argValueComboBox.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="&gt;&gt;argValueTextBox.ZOrder">
+    <value>0</value>
+  </data>
+  <data name="sendToNotepadMenuItem.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent">
+    <value>$this</value>
+  </data>
+  <data name="menuItem2.ShowShortcut" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="$this.ToolTip">
+    <value />
+  </data>
+  <data name="menuItem3.ShowShortcut" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;argValueComboBox.Name">
+    <value>argValueComboBox</value>
+  </data>
+  <data name="actionNameLabel.Size" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>328, 16</value>
+  </data>
+  <data name="argDirPictureBox.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;argValueTextBox.Parent">
+    <value>panel1</value>
+  </data>
+  <data name="menuItem2.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argValueComboBox.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Inherit</value>
+  </data>
+  <data name="actionNameLabel.ImageIndex" type="System.Int32, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>-1</value>
+  </data>
+  <data name="menuItem7.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="menuItem7.ShowShortcut" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="actionNameLabel.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Name">
+    <value>UPnpArgumentControl</value>
+  </data>
+  <data name="argValueComboBox.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="argValueComboBox.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </data>
+  <data name="menuItem1.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="argValueTextBox.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="menuItem1.Visible" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="argValueTextBox.Multiline" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="sendToExplorerMenuItem.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>None</value>
+  </data>
+  <data name="panel1.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;sizeContextMenu.Type">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel1.Font" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </data>
+  <data name="panel1.Enabled" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+  <data name="actionNameLabel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Name">
+    <value>toolTip</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;argValueComboBox.Parent">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;menuItem2.Type">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;argValueComboBox.Type">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="argValueComboBox.IntegralHeight" type="System.Boolean, mscorlib, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </data>
+</root>
