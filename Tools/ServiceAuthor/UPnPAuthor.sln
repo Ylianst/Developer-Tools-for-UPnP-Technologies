@@ -1,29 +1,23 @@
-Microsoft Visual Studio Solution File, Format Version 8.00
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnPAuthor", "UPnPAuthor.csproj", "{2CCD15DE-F3AE-46AF-A1C0-D0173537DC64}"
-	ProjectSection(ProjectDependencies) = postProject
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnP", "..\..\Global\UPnP\UPnP.csproj", "{584ED187-8F2A-4B58-A266-85F3F212B092}"
-	ProjectSection(ProjectDependencies) = postProject
-	EndProjectSection
 EndProject
 Global
-	GlobalSection(SolutionConfiguration) = preSolution
-		Debug = Debug
-		Release = Release
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(ProjectConfiguration) = postSolution
-		{2CCD15DE-F3AE-46AF-A1C0-D0173537DC64}.Debug.ActiveCfg = Debug|.NET
-		{2CCD15DE-F3AE-46AF-A1C0-D0173537DC64}.Debug.Build.0 = Debug|.NET
-		{2CCD15DE-F3AE-46AF-A1C0-D0173537DC64}.Release.ActiveCfg = Release|.NET
-		{2CCD15DE-F3AE-46AF-A1C0-D0173537DC64}.Release.Build.0 = Release|.NET
-		{584ED187-8F2A-4B58-A266-85F3F212B092}.Debug.ActiveCfg = Debug|.NET
-		{584ED187-8F2A-4B58-A266-85F3F212B092}.Debug.Build.0 = Debug|.NET
-		{584ED187-8F2A-4B58-A266-85F3F212B092}.Release.ActiveCfg = Release|.NET
-		{584ED187-8F2A-4B58-A266-85F3F212B092}.Release.Build.0 = Release|.NET
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CCD15DE-F3AE-46AF-A1C0-D0173537DC64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCD15DE-F3AE-46AF-A1C0-D0173537DC64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584ED187-8F2A-4B58-A266-85F3F212B092}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-	EndGlobalSection
-	GlobalSection(ExtensibilityAddIns) = postSolution
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

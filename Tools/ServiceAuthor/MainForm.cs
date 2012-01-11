@@ -128,10 +128,24 @@ namespace UPnPAuthor
 			openScpdDialog.FileName = "";
 			MainFormTitle = Text;
 
+            foreach (string parm in args)
+            {
+                if (parm.ToUpper() == "/DEBUG")
+                {
+                    OpenSource.Utilities.InstanceTracker.Enabled = true;
+                    OpenSource.Utilities.EventLogger.Enabled = true;
+                    OpenSource.Utilities.EventLogger.ShowAll = true;
+                    OpenSource.Utilities.InstanceTracker.Display();
+                }
+            }
+
 			if(args.Length==1)
 			{
-				openScpdDialog.FileName = args[0];
-				this.openFile(new FileInfo(args[0]));
+                if (args[0].ToUpper() != "/DEBUG")
+                {
+                    openScpdDialog.FileName = args[0];
+                    this.openFile(new FileInfo(args[0]));
+                }
 			}
 
 //			TestForm t = new TestForm();
