@@ -124,6 +124,10 @@ namespace OpenSource.UPnP
         {
         }
 
+        /// <summary>
+        /// Sends requests for all service xml's of the device and any embedded devices
+        /// </summary>
+        /// <param name="device"></param>
         private void FetchServiceDocuments(UPnPDevice device)
         {
             for (int x = 0; x < device.Services.Length; ++x) httprequestor.LaunchRequest(device.Services[x].SCPDURL, null, null, null, device.Services[x]);
@@ -200,7 +204,10 @@ namespace OpenSource.UPnP
                         {
                             OpenSource.Utilities.EventLogger.Log(this, System.Diagnostics.EventLogEntryType.Error, "Invalid SCPD XML on device:\r\n   Friendly: " + this.TempDevice.FriendlyName + "\r\n   Service: " + ((UPnPService)tag).ServiceURN + "\r\n   @" + TempDevice.LocationURL);
                             OpenSource.Utilities.EventLogger.Log(e);
-                            return;
+                            // TODO: DONE Resilience case 5b - remove the faulty service from owning device, with a log message
+                            ((UPnPService)tag).ParentDevice.RemoveService((UPnPService)tag);
+                            OpenSource.Utilities.EventLogger.Log(this, System.Diagnostics.EventLogEntryType.Warning, "Dropping failed SCPD and the accompanying service from its parent device. Commencing parsing remainder of device");
+                            //return;   disabled, must continue parsing after logging error
                         }
 
                         --ServiceNum;
@@ -222,6 +229,10 @@ namespace OpenSource.UPnP
                 catch (Exception)
                 {
                     OpenSource.Utilities.EventLogger.Log(this, System.Diagnostics.EventLogEntryType.Error, "Invalid Device Description XML @" + url);
+                    // TODO: DONE Resilience case 7 - if root device fails, no change, keep failing.
+                    // when exceptions on elements are caught, then the device will still be created, yet incomplete as it is constructed 
+                    // without the failed elements.
+                    // TODO: should the OnFailed handler then still be called? Would it break something if it doesn't?
                     if (OnFailed2 != null) OnFailed2(this, new Uri(url), new Exception("Invalid Device Description XML @" + url), expected_usn);
                     if (TempDevice != null) TempDevice = null;
                     return;
@@ -247,6 +258,7 @@ namespace OpenSource.UPnP
                     ServiceNum = FetchServiceCount(TempDevice);
                     if (ServiceNum == 0)
                     {
+                        // no service descriptions to wait for, we are complete. fire event is available
                         if (OnDevice != null)
                         {
                             OnDevice(this, TempDevice, new Uri(url));
