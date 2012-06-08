@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnPAuthor", "UPnPAuthor.csproj", "{2CCD15DE-F3AE-46AF-A1C0-D0173537DC64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceAuthor", "ServiceAuthor.csproj", "{2CCD15DE-F3AE-46AF-A1C0-D0173537DC64}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnP", "..\..\Global\UPnP\UPnP.csproj", "{584ED187-8F2A-4B58-A266-85F3F212B092}"
 EndProject

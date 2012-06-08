@@ -23,7 +23,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using OpenSource.UPnP;
 
-namespace UPnPAuthor
+namespace ServiceAuthor
 {
 	/// <summary>
 	/// Summary description for MainForm.
