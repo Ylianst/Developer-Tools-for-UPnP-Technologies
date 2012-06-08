@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPNPAV", "UPNPAV.csproj", "{B2439738-5F46-4E59-95A1-92C3DF38696F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2439738-5F46-4E59-95A1-92C3DF38696F}.Debug|Default.ActiveCfg = Debug|Any CPU
+		{B2439738-5F46-4E59-95A1-92C3DF38696F}.Debug|Default.Build.0 = Debug|Any CPU
+		{B2439738-5F46-4E59-95A1-92C3DF38696F}.Release|Default.ActiveCfg = Release|Any CPU
+		{B2439738-5F46-4E59-95A1-92C3DF38696F}.Release|Default.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
