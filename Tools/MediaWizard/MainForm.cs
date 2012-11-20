@@ -433,83 +433,88 @@ namespace UPnPWizard
             UpdateMuteState();
         }
 
+
+        protected delegate void NumberOfTracksChangedSinkHandler(AVConnection sender, UInt32 NumOfTracks);
         protected void NumberOfTracksChangedSink(AVConnection sender, UInt32 NumOfTracks)
         {
-            if (CurrentConnection != null)
+            if (CurrentConnection == null) return;
+            if (InvokeRequired) { Invoke(new NumberOfTracksChangedSinkHandler(NumberOfTracksChangedSink), sender, NumOfTracks); return; }
+
+            if (CurrentConnection.Identifier == sender.Identifier)
             {
-                if (CurrentConnection.Identifier == sender.Identifier)
-                {
-                    TrackInfo.Text = sender.CurrentTrack.ToString() + "/" + sender.NumberOfTracks.ToString();
-                }
+                TrackInfo.Text = sender.CurrentTrack.ToString() + "/" + sender.NumberOfTracks.ToString();
             }
         }
+        protected delegate void TrackChangedSinkHandler(AVConnection sender, UInt32 TrackN);
         protected void TrackChangedSink(AVConnection sender, UInt32 TrackN)
         {
-            if (CurrentConnection != null)
+            if (CurrentConnection == null) return;
+            if (InvokeRequired) { Invoke(new TrackChangedSinkHandler(TrackChangedSink), sender, TrackN); return; }
+
+            if (CurrentConnection.Identifier == sender.Identifier)
             {
-                if (CurrentConnection.Identifier == sender.Identifier)
-                {
-                    TrackInfo.Text = sender.CurrentTrack.ToString() + "/" + sender.NumberOfTracks.ToString();
-                }
+                TrackInfo.Text = sender.CurrentTrack.ToString() + "/" + sender.NumberOfTracks.ToString();
             }
         }
+        protected delegate void TrackURIChangedSinkHandler(AVConnection sender);
         protected void TrackURIChangedSink(AVConnection sender)
         {
-            if (CurrentConnection != null)
+            if (CurrentConnection == null) return;
+            if (InvokeRequired) { Invoke(new TrackURIChangedSinkHandler(TrackURIChangedSink), sender); return; }
+
+            if (CurrentConnection.Identifier == sender.Identifier)
             {
-                if (CurrentConnection.Identifier == sender.Identifier)
+                //MetaData.Text = HTTPMessage.UnEscapeString(sender.TrackURI);
+                bool OK = false;
+                if (sender.Container != null)
                 {
-                    //MetaData.Text = HTTPMessage.UnEscapeString(sender.TrackURI);
-                    bool OK = false;
-                    if (sender.Container != null)
+                    foreach (MediaItem Item in sender.Container.Items)
                     {
-                        foreach (MediaItem Item in sender.Container.Items)
+                        foreach (MediaResource R in Item.MergedResources)
                         {
-                            foreach (MediaResource R in Item.MergedResources)
-                                if (R.ContentUri == sender.TrackURI)
-                                {
-                                    OK = true;
-                                    Author.Text = Item.Creator;
-                                    Title.Text = Item.Title;
-                                    break;
-                                }
+                            if (R.ContentUri == sender.TrackURI)
+                            {
+                                OK = true;
+                                Author.Text = Item.Creator;
+                                Title.Text = Item.Title;
+                                break;
+                            }
                         }
                     }
-                    if (OK == false)
+                }
+                if (OK == false)
+                {
+                    if (sender.TrackURI != "")
                     {
-                        if (sender.TrackURI != "")
+                        try
                         {
-                            try
-                            {
-                                Uri temp = new Uri(sender.TrackURI);
-                                string temp2 = HTTPMessage.UnEscapeString(temp.LocalPath);
-                                temp2 = temp2.Substring(temp2.LastIndexOf("/"));
-                                temp2 = temp2.Substring(0, temp2.LastIndexOf("."));
-                                temp2 = temp2.Substring(1);
-                                Author.Text = "";
-                                Title.Text = temp2;
-                            }
-                            catch (Exception e)
-                            {
-                                OpenSource.Utilities.EventLogger.Log(e);
-                            }
-                        }
-                        else
-                        {
-                            Title.Text = "";
+                            Uri temp = new Uri(sender.TrackURI);
+                            string temp2 = HTTPMessage.UnEscapeString(temp.LocalPath);
+                            temp2 = temp2.Substring(temp2.LastIndexOf("/"));
+                            temp2 = temp2.Substring(0, temp2.LastIndexOf("."));
+                            temp2 = temp2.Substring(1);
                             Author.Text = "";
+                            Title.Text = temp2;
                         }
+                        catch (Exception e)
+                        {
+                            OpenSource.Utilities.EventLogger.Log(e);
+                        }
+                    }
+                    else
+                    {
+                        Title.Text = "";
+                        Author.Text = "";
                     }
                 }
             }
         }
+        
         public delegate void VoidDelegate();
         protected void ShowRenderer()
         {
-            this.BeginInvoke(new VoidDelegate(ShowRendererEx));
-        }
-        protected void ShowRendererEx()
-        {
+            if (InvokeRequired) { Invoke(new VoidDelegate(ShowRenderer)); return; }
+
             PlayModeLabel.Cursor = Cursors.Default;
             if (CurrentRenderer == null)
             {
@@ -612,8 +617,11 @@ namespace UPnPWizard
             }
         }
 
+        protected delegate void SetVolumeLevelHandler(string channel, UInt16 level);
         protected void SetVolumeLevel(string channel, UInt16 level)
         {
+            if (InvokeRequired) { Invoke(new SetVolumeLevelHandler(SetVolumeLevel), channel, level); return; }
+
             PictureBox TallBox = null;
             PictureBox ShortBox = null;
 
@@ -638,10 +646,11 @@ namespace UPnPWizard
             double p = (double)1 - (double)level / (double)100;
             int V = (int)((p * (double)TallBox.Height));
             ShortBox.Height = V;
-
         }
+        protected delegate void SetVolumeLevelHandler2(int level);
         protected void SetVolumeLevel(int level)
         {
+            if (InvokeRequired) { Invoke(new SetVolumeLevelHandler2(SetVolumeLevel), level); return; }
             double p = (double)1 - (double)level / (double)100;
             int V = (int)((p * (double)greenVolumeBar.Height));
             blueVolumeBar.Height = V;
@@ -652,13 +661,7 @@ namespace UPnPWizard
         /// </summary>
         protected override void Dispose(bool disposing)
         {
-            if (disposing)
-            {
-                if (components != null)
-                {
-                    components.Dispose();
-                }
-            }
+            if (disposing) { if (components != null) { components.Dispose(); } }
             base.Dispose(disposing);
         }
 
@@ -1547,9 +1550,12 @@ namespace UPnPWizard
             ShowRenderer();
         }
 
+        private delegate void PlayModeChangedSinkHandler(AVConnection sender, AVConnection.PlayMode NewMode);
         private void PlayModeChangedSink(AVConnection sender, AVConnection.PlayMode NewMode)
         {
             if (CurrentConnection == null) return;
+            if (InvokeRequired) { Invoke(new PlayModeChangedSinkHandler(PlayModeChangedSink), sender, NewMode); return; }
+
             if (sender.Identifier == CurrentConnection.Identifier)
             {
                 switch (NewMode)
@@ -1578,9 +1584,11 @@ namespace UPnPWizard
                 }
             }
         }
+        private delegate void VolumeChangeSinkHandler(AVConnection sender, UInt16 VolumeValue);
         private void VolumeChangeSink(AVConnection sender, UInt16 VolumeValue)
         {
             if (CurrentConnection == null) return;
+            if (InvokeRequired) { Invoke(new VolumeChangeSinkHandler(VolumeChangeSink), sender, VolumeValue); return; }
 
             if (sender.Identifier == CurrentConnection.Identifier)
             {
@@ -1597,10 +1605,11 @@ namespace UPnPWizard
             }
         }
 
+        private delegate void PositionChangeSinkHandler(AVConnection sender, TimeSpan TS);
         private void PositionChangeSink(AVConnection sender, TimeSpan TS)
         {
-            if (CurrentConnection == null) return;
-            if (SeekChange == true || VolumeChange == true) return;
+            if (CurrentConnection == null || SeekChange == true || VolumeChange == true) return;
+            if (InvokeRequired) { Invoke(new PositionChangeSinkHandler(PositionChangeSink), sender, TS); return; }
 
             if (sender.Identifier == CurrentConnection.Identifier)
             {
@@ -1621,23 +1630,20 @@ namespace UPnPWizard
         private void PauseButton_Click(object sender, System.EventArgs e)
         {
             if (CurrentConnection == null) return;
-
             CurrentConnection.Pause();
         }
 
         private void StopButton_Click(object sender, System.EventArgs e)
         {
             if (CurrentConnection == null) return;
-
             CurrentConnection.Stop();
-
         }
 
-
+        private delegate void PlayStateSinkHandler(AVConnection sender, AVConnection.PlayState state);
         private void PlayStateSink(AVConnection sender, AVConnection.PlayState state)
         {
-            if (CurrentConnection == null) return;
-            if (CurrentConnection.Identifier != sender.Identifier) return;
+            if (CurrentConnection == null || CurrentConnection.Identifier != sender.Identifier) return;
+            if (InvokeRequired) { Invoke(new PlayStateSinkHandler(PlayStateSink), sender, state); return; }
 
             PlayButton.ImageIndex = 1;
             StopButton.ImageIndex = 1;
@@ -1718,10 +1724,7 @@ namespace UPnPWizard
         private void DoneSink(HTTPSession s, Stream ss)
         {
             ss.Close();
-            if ((bool)s.StateObject == true)
-            {
-                s.Close();
-            }
+            if ((bool)s.StateObject == true) { s.Close(); }
         }
 
         private void NextButton_Click(object sender, System.EventArgs e)

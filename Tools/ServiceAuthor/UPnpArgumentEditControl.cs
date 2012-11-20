@@ -22,7 +22,7 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using OpenSource.UPnP;
 
-namespace UPnPAuthor
+namespace ServiceAuthor
 {
 	/// <summary>
 	/// Summary description for UPnpArgumentControl.

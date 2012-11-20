@@ -135,6 +135,8 @@ struct ILibAsyncSocketModule
 	// The address and port of a HTTPS proxy
 	struct sockaddr_in6 ProxyAddress;
 	int ProxyState;
+	char* ProxyUser;
+	char* ProxyPass;
 #endif
 
 	ILibAsyncSocket_OnData OnData;
@@ -692,7 +694,11 @@ void ILibAsyncSocket_ConnectTo(void* socketModule, struct sockaddr *localInterfa
 	if (localInterface == NULL)
 	{
 		memset(&any, 0, sizeof(struct sockaddr_in6));
+		#ifdef MICROSTACK_PROXY
+		if (module->ProxyAddress.sin6_family == 0) any.sin6_family = remoteAddress->sa_family; else any.sin6_family = module->ProxyAddress.sin6_family;
+		#else
 		any.sin6_family = remoteAddress->sa_family;
+		#endif
 		localInterface = (struct sockaddr*)&any;
 	}
 
@@ -703,7 +709,7 @@ void ILibAsyncSocket_ConnectTo(void* socketModule, struct sockaddr *localInterfa
 #endif
 
 	// Allocate a new socket
-	if ((module->internalSocket = ILibGetSocket(localInterface, SOCK_STREAM, IPPROTO_TCP)) == 0) {PRINTERROR(); ILIBCRITICALEXIT(253);}
+	if ((module->internalSocket = ILibGetSocket(localInterface, SOCK_STREAM, IPPROTO_TCP)) == 0) { PRINTERROR(); ILIBCRITICALEXIT(253); }
 
 	// Initialise the buffer pointers, since no data is in them yet.
 	module->FinConnect = 0;
@@ -758,12 +764,14 @@ void ILibAsyncSocket_ConnectTo(void* socketModule, struct sockaddr *localInterfa
 		}
 	#endif
 	#ifdef WIN32
-		if (GetLastError() != WSAEWOULDBLOCK) // The result of the connect should always be "WOULD BLOCK" on Windows.
 		{
-			// This happens when the interface is no longer available. Disconnect socket.
-			module->FinConnect = -1;
-			ILibLifeTime_Add(module->LifeTime, socketModule, 0, &ILibAsyncSocket_Disconnect, NULL);
-			return;
+			if (GetLastError() != WSAEWOULDBLOCK) // The result of the connect should always be "WOULD BLOCK" on Windows.
+			{
+				// This happens when the interface is no longer available. Disconnect socket.
+				module->FinConnect = -1;
+				ILibLifeTime_Add(module->LifeTime, socketModule, 0, &ILibAsyncSocket_Disconnect, NULL);
+				return;
+			}
 		}
 	#endif
 #endif
@@ -773,11 +781,14 @@ void ILibAsyncSocket_ConnectTo(void* socketModule, struct sockaddr *localInterfa
 
 #ifdef MICROSTACK_PROXY
 // Connect to a remote access using an HTTPS proxy. If "proxyAddress" is set to NULL, this call acts just to a normal connect call without a proxy.
-void ILibAsyncSocket_ConnectToProxy(void* socketModule, struct sockaddr *localInterface, struct sockaddr *remoteAddress, struct sockaddr *proxyAddress, ILibAsyncSocket_OnInterrupt InterruptPtr, void *user)
+void ILibAsyncSocket_ConnectToProxy(void* socketModule, struct sockaddr *localInterface, struct sockaddr *remoteAddress, struct sockaddr *proxyAddress, char* proxyUser, char* proxyPass, ILibAsyncSocket_OnInterrupt InterruptPtr, void *user)
 {
 	struct ILibAsyncSocketModule *module = (struct ILibAsyncSocketModule*)socketModule;
 	memset(&(module->ProxyAddress), 0, sizeof(struct sockaddr_in6));
 	module->ProxyState = 0;
+	module->ProxyUser = proxyUser; // Proxy user & password are kept by reference!!!
+	module->ProxyPass = proxyPass;
+
 	if (proxyAddress != NULL) memcpy(&(module->ProxyAddress), proxyAddress, INET_SOCKADDR_LENGTH(proxyAddress->sa_family));
 	ILibAsyncSocket_ConnectTo(socketModule, localInterface, remoteAddress, InterruptPtr, user);
 }
@@ -1423,7 +1434,16 @@ void ILibAsyncSocket_PostSelect(void* socketModule, int slct, fd_set *readset, f
 				{
 					int len2, len3;
 					ILibInet_ntop((int)(module->RemoteAddress.sin6_family), (void*)&(((struct sockaddr_in*)&(module->RemoteAddress))->sin_addr), ILibScratchPad, 4096);
-					len2 = snprintf(ILibScratchPad2, 4096, "CONNECT %s:%d HTTP/1.1\r\nProxy-Connection: keep-alive\r\nHost: %s\r\n\r\n", ILibScratchPad, ntohs(module->RemoteAddress.sin6_port), ILibScratchPad);
+					if (module->ProxyUser == NULL || module->ProxyPass == NULL)
+					{
+						len2 = snprintf(ILibScratchPad2, 4096, "CONNECT %s:%d HTTP/1.1\r\nProxy-Connection: keep-alive\r\nHost: %s\r\n\r\n", ILibScratchPad, ntohs(module->RemoteAddress.sin6_port), ILibScratchPad);
+					} else {
+						char* ProxyAuth = NULL;
+						len2 = snprintf(ILibScratchPad2, 4096, "%s:%s", module->ProxyUser, module->ProxyPass);
+						len2 = ILibBase64Encode((unsigned char*)ILibScratchPad2, len2, (unsigned char**)&ProxyAuth);
+						len2 = snprintf(ILibScratchPad2, 4096, "CONNECT %s:%d HTTP/1.1\r\nProxy-Connection: keep-alive\r\nHost: %s\r\nProxy-authorization: basic %s\r\n\r\n", ILibScratchPad, ntohs(module->RemoteAddress.sin6_port), ILibScratchPad, ProxyAuth);
+						if (ProxyAuth != NULL) free(ProxyAuth);
+					}
 					len3 = send(module->internalSocket, ILibScratchPad2, len2, MSG_NOSIGNAL);
 					module->ProxyState = 1;
 					// TODO: Set timeout. If the proxy does not respond, we need to close this connection.

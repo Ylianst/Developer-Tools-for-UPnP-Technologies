@@ -1,0 +1,53 @@
+﻿Adding resilience to the UPnP stack to handle malformed devices/services instead of completely ignoring them.
+
+Of the cases below, only the last case (failing root device) will fail at creating a UPnPDevice object, all
+other cases will drop the failed parts and continue. There should be no real negative consequences from 
+handling devices this way.
+ - bad devices will show up, where they now do not. Be it without all their properies but thats up to their
+   maker to fix. The tools can now be used to inspect them, which really helps troubleshooting.
+ - if an element fails, and it was a required element, then the device no longer acts as the device type
+   it is advertized to be. The again; that is also a vendor problem, device type checking was never done
+   anyway.
+
+Cases;
+1 - bad StateVariable -> drop StateVariable
+2 - bad Argument -> drop the Action (see 4)
+3 - no relation between Argument and StateVariable -> drop the Action (see 4)
+4 - bad Action -> drop the Action, including all its arguments
+5 - bad Service; 2 sub cases
+5a - bad service element in device xml -> drop the Service
+5b - bad service xml -> drop the Service
+6 - bad embedded Device -> drop the embedded Device
+7 - bad root Device -> fail at device creation (no change in UPnP stack behaviour)
+
+AD 1 - dropping a StateVariable
+Just remove the StateVariable. Consequence could be that Action Arguments relying on the StateVariable
+will fail as well, this will result in dropping those Actions as well (see 2)
+
+AD 2 - dropping an Argument
+Dropping an argument also requires dropping the owning Action (see 4) and the relation of the Argument
+to its related StateVariable.
+
+AD 3 - dropping a relation
+If no relation can be created between an Argument and its related StateVariable, the Argument should be 
+dropped, similar to 2, causing the Action to be dropped as well, see 4.
+
+AD 4 - dropping an Action
+Dropping an Action requires to also drop all its related Arguments.
+For any arguments, the relation with StateVariables must be removed as well.
+
+AD 5 - dropping a Service;
+This has no consequences, worst case there will be a device with no services at all (still within UPnP specs).
+
+AD 5a - dropping the service from the Device xml
+If it is dropped here, the underlying Service xml will never be requested.
+
+AD 5b - dropping the service from the Service xml
+If the Service xml cannot be parsed, the service should be dropped. This includes removing the already parsed
+element from the Device xml.
+
+Ad 6 - dropping an embedded Device;
+This has no consequences.
+
+AD 7 - failing root Device;
+If the root device creation fails, then there simply is no device. So current behaviour should remain.

@@ -2099,6 +2099,7 @@ namespace UPnPStackBuilder
 
         private void addDeviceMenuItem_Click(object sender, System.EventArgs e)
         {
+            saveAsMenuItem.Enabled = true;
             UPnPDevice device = UPnPDevice.CreateRootDevice(6000, 1.0, ".");
             device.FriendlyName = "Sample Embedded Device";
             device.DeviceURN = "urn:schemas-upnp-org:device:Sample:1";
@@ -2161,6 +2162,16 @@ namespace UPnPStackBuilder
             {
                 emptyPanel.BringToFront();
                 emptyPanel.Visible = true;
+            }
+
+            if (treeView.Nodes.Count == 0)
+            {
+                this.Text = AppTitle;
+                treeView.Nodes.Clear();
+                saveMenuItem.Enabled = false;
+                saveAsMenuItem.Enabled = false;
+                treeView_AfterSelect(this, null);
+                updateStatusText();
             }
         }
         private void deviceInformationChanged(object sender, System.EventArgs e)

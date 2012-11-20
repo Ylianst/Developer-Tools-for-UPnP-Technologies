@@ -20,7 +20,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace UPnPAuthor
+namespace ServiceAuthor
 {
 	/// <summary>
 	/// Summary description for TestForm.

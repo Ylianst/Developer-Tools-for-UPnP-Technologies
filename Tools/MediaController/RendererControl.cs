@@ -543,6 +543,8 @@ namespace UPnpMediaController
 
 		private void PlayStateChangedHandlerSink(AVConnection sender, AVConnection.PlayState NewState)
 		{
+            if (InvokeRequired) { Invoke(new AVConnection.PlayStateChangedHandler(PlayStateChangedHandlerSink), sender, NewState); return; }
+
 			playButton.Image = playPictureBox2.Image;
 			recordButton.Image = recordPictureBox2.Image;
 			stopButton.Image = stopPictureBox2.Image;
@@ -568,6 +570,8 @@ namespace UPnpMediaController
 
 		private void MuteStateChangedHandlerSink(AVConnection sender, bool NewMuteStatus)
 		{
+            if (InvokeRequired) { Invoke(new AVConnection.MuteStateChangedHandler(MuteStateChangedHandlerSink), sender, NewMuteStatus); return; }
+
 			if (connection.IsMute == true) 
 			{
 				muteButton.Image = mutedPictureBox.Image;
@@ -581,6 +585,8 @@ namespace UPnpMediaController
 		private void VolumeChangedHandlerSink(AVConnection sender, UInt16 volume)
 		{
 			if(sender.Identifier!=connection.Identifier) return;
+            if (InvokeRequired) { Invoke(new AVConnection.VolumeChangedHandler(VolumeChangedHandlerSink), sender, volume); return; }
+
 			foreach(string Channels in sender.SupportedChannels)
 			{
 				if(AdjustingVolume==false)
@@ -601,6 +607,8 @@ namespace UPnpMediaController
 
 		private void PositionChangedHandlerSink(AVConnection sender, TimeSpan position)
 		{
+            if (InvokeRequired) { Invoke(new AVConnection.PositionChangedHandler(PositionChangedHandlerSink), sender, position); return; }
+
 			if (mediaProgressBar.Tag == null && sender.Duration.TotalSeconds != 0) 
 			{
 				if(position.TotalSeconds<sender.Duration.TotalSeconds)

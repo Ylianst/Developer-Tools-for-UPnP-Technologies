@@ -2160,6 +2160,14 @@ namespace OpenSource.UPnP
         {
             return(Parse(XML,null));
         }*/
+
+        /// <summary>
+        /// Parses a root UPnP device from an xml description
+        /// </summary>
+        /// <param name="XML">The xml string containing the device description</param>
+        /// <param name="source">Uri of the device to be parsed</param>
+        /// <param name="Intfce">IPAddress where the device can be found (UPnPDevice.InterfaceToHost)</param>
+        /// <returns>The created UPnP device</returns>
         static internal UPnPDevice Parse(String XML, Uri source, IPAddress Intfce)
         {
             bool Skipping;
@@ -2219,6 +2227,9 @@ namespace OpenSource.UPnP
                             }
                             else
                             {
+                                // TODO: ?? wrap this in try-catch block
+                                // Not needed; devices may fail, only embedded embedded device must be caught. This is done
+                                // at ParseDeviceList.
                                 ParseDevice("<device>\r\n" + XMLDoc.ReadInnerXml() + "</device>", ref RetVal);
                             }
                             break;
@@ -2240,6 +2251,9 @@ namespace OpenSource.UPnP
                         RetVal.BaseURL = new Uri(AssumedBaseURL);
                         // RetVal.BaseURL = new Uri("http://127.0.0.1/");
                     }
+                    // TODO: ?? wrap this in try-catch block
+                    // Not needed devices may fail, only embedded embedded device must be caught. This is done
+                    // at ParseDeviceList.
                     ParseDevice(NeedParseDeviceString, ref RetVal);
                 }
                 return (RetVal);
@@ -2251,6 +2265,11 @@ namespace OpenSource.UPnP
 
         }
 
+        /// <summary>
+        /// Parses the embedded devices from a device xml
+        /// </summary>
+        /// <param name="XML">The xml document to parse the devices from</param>
+        /// <param name="RetVal">The owning-UPnP device to which the parsed devices will be added as embedded devices</param>
         static private void ParseDeviceList(String XML, ref UPnPDevice RetVal)
         {
             StringReader MyString = new StringReader(XML);
@@ -2272,8 +2291,24 @@ namespace OpenSource.UPnP
                         EmbeddedDevice = new UPnPDevice();
                         EmbeddedDevice.IsRoot = false;
                         EmbeddedDevice.BaseURL = RetVal.BaseURL;
-                        ParseDevice("<device>\r\n" + XMLDoc.ReadInnerXml() + "</device>", ref EmbeddedDevice);
-                        RetVal.AddDevice(EmbeddedDevice);
+                        string devicexml = "Failed to read the xml element for the embedded Device from the parent Device XML";
+                        // TODO: DONE Resilience case 6 - wrap in try-catch
+                        try
+                        {
+                            devicexml = "<device>\r\n" + XMLDoc.ReadInnerXml() + "</device>";
+                            ParseDevice(devicexml, ref EmbeddedDevice);
+                            // TODO: DONE Resilience case 6 - only add if it is not null
+                            if (EmbeddedDevice != null)
+                            {
+                                RetVal.AddDevice(EmbeddedDevice);
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            OpenSource.Utilities.EventLogger.Log(null, System.Diagnostics.EventLogEntryType.Error, "Invalid EmbeddedDevice XML");
+                            OpenSource.Utilities.EventLogger.Log(e, "XML content: \r\n" + devicexml);
+                            OpenSource.Utilities.EventLogger.Log(null, System.Diagnostics.EventLogEntryType.Warning, "Dropping failed Embedded Device and commencing parsing remainder of device");
+                        }
                     }
                     if (!XMLDoc.IsStartElement() && XMLDoc.LocalName != "deviceList")
                     {
@@ -2283,6 +2318,11 @@ namespace OpenSource.UPnP
                 }
             }
         }
+        /// <summary>
+        /// Parses an xml to a UPnP device (either a root or an embedded device)
+        /// </summary>
+        /// <param name="XML">xml containing the device description</param>
+        /// <param name="RetVal">the UPnP device into which the xml data will be parsed</param>
         static private void ParseDevice(String XML, ref UPnPDevice RetVal)
         {
             string TempString;
@@ -2381,8 +2421,20 @@ namespace OpenSource.UPnP
                             {
                                 if (XMLDoc.LocalName == "service")
                                 {
-                                    service = UPnPService.Parse(XMLDoc.ReadOuterXml());
-                                    RetVal.AddService(service);
+                                    // TODO: DONE Resilience case 5a - wrap in try/catch block
+                                    string servicexml = "Failed to read service xml element from device xml";
+                                    try
+                                    {
+                                        servicexml = XMLDoc.ReadOuterXml();
+                                        service = UPnPService.Parse(servicexml);
+                                        RetVal.AddService(service);
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        OpenSource.Utilities.EventLogger.Log(null, System.Diagnostics.EventLogEntryType.Error, "Invalid Service element within Device XML");
+                                        OpenSource.Utilities.EventLogger.Log(e, "XML content: \r\n" + servicexml);
+                                        OpenSource.Utilities.EventLogger.Log(null, System.Diagnostics.EventLogEntryType.Warning, "Dropping failed Service and commencing parsing remainder of device");
+                                    }
                                 }
                                 if (!XMLDoc.IsStartElement())
                                 {

@@ -2071,12 +2071,13 @@ namespace UPnPStackBuilder
                     cs = new CodeProcessor(new StringBuilder(), this.Language == LANGUAGES.CPP);
                     cs.Append("void UPnPPresentationRequest(void* upnptoken, struct packetheader *packet)" + cl);
                     cs.Append("{" + cl);
-                    cs.Append("	printf(\"UPnP Presentation Request: %s %s\\r\\n\", packet->Directive,packet->DirectiveObj);" + cl);
+                    cs.Append(" char str[40];" + cl);
+                    cs.Append(" ILibInet_ntop2((struct sockaddr*)packet->Source, str, 40);" + cl);
+                    cs.Append(" printf(\"UPnP Presentation Request: %s %s %s\\r\\n\", packet->Directive, packet->DirectiveObj, str);" + cl);
                     cs.Append(cl);
-                    cs.Append("	/* TODO: Add Web Response Code Here... */" + cl);
-                    cs.Append("	printf(\"HOST: %x\\r\\n\",UPnPGetLocalInterfaceToHost(upnptoken));" + cl);
+                    cs.Append("	// TODO: Add Web Response Code Here..." + cl);
                     cs.Append(cl);
-                    cs.Append("	ILibWebServer_Send_Raw((struct ILibWebServer_Session *)upnptoken, \"HTTP/1.1 200 OK\\r\\nContent-Length: 0\\r\\n\\r\\n\" , 38 , 1, 1);" + cl);
+                    cs.Append("	ILibWebServer_Send_Raw((struct ILibWebServer_Session *)upnptoken, \"HTTP/1.1 200 OK\\r\\nContent-Length: 0\\r\\n\\r\\n\", 38, 1, 1);" + cl);
                     cs.Append("}" + cl);
 
                     WS = WS.Replace("//{{{PresentationRequest}}}", "//{{{PresentationRequest}}}" + cl + cs.ToString());

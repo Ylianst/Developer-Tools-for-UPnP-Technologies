@@ -165,7 +165,10 @@ namespace UPnpMediaController
 
 			rendererDiscovery = new AVRendererDiscovery((new AVRendererDiscovery.DiscoveryHandler(RendererAddedSink)));
 			rendererDiscovery.OnRendererRemoved += new AVRendererDiscovery.DiscoveryHandler(new AVRendererDiscovery.DiscoveryHandler(RendererRemovedSink));
-			
+
+            mediaListView.GetType().GetProperty("DoubleBuffered", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(mediaListView, true, null);
+            eventListView.GetType().GetProperty("DoubleBuffered", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(eventListView, true, null);
+
 			this.m_SpiderTimer = new System.Timers.Timer();
 			this.m_SpiderTimer.Interval = 10000;
 			this.m_SpiderTimer.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimeToClearSpiderCache);

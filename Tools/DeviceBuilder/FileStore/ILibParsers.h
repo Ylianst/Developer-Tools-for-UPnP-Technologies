@@ -824,6 +824,11 @@ extern char* ILibCriticalLogFilename;
 	void ILibLifeTime_Remove(void *LifeTimeToken, void *data);
 
 	//
+	// Return the expiration time for an event
+	//
+	long long ILibLifeTime_GetExpiration(void *LifetimeMonitorObject, void *data);
+
+	//
 	// Removes all events triggers
 	//
 	void ILibLifeTime_Flush(void *LifeTimeToken);
@@ -1028,7 +1033,8 @@ extern char* ILibCriticalLogFilename;
 	char* ILibInet_ntop(int af, const void *src, char *dst, size_t dstsize);
 	int ILibInet_pton(int af, const char *src, void *dst);
 	long long htonll(long long value);
-
+	int ILibResolve(char* hostname, char* service, struct sockaddr_in6* addr6);
+	
 	//
 	// Used to log critical problems
 	//
