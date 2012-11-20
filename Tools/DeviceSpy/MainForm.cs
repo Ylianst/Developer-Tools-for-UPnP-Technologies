@@ -991,7 +991,7 @@ namespace UPnpSpy
                     {
                         if (d.PresentationURL.StartsWith("/") == true)
                         {
-                            deviceURL = "http://" + d.RemoteEndPoint.Address.ToString() + ":" + d.PresentationURL;
+                            deviceURL = "http://" + d.RemoteEndPoint.Address.ToString() + ":" + d.RemoteEndPoint.Port.ToString() + d.PresentationURL;
                         }
                         else
                         {

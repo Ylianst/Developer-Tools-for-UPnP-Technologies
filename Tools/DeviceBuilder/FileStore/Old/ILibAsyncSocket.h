@@ -154,7 +154,7 @@ void ILibAsyncSocket_ResetTotalBytesSent(ILibAsyncSocket_SocketModule socketModu
 void ILibAsyncSocket_ConnectTo(void* socketModule, struct sockaddr *localInterface, struct sockaddr *remoteAddress, ILibAsyncSocket_OnInterrupt InterruptPtr, void *user);
 
 #ifdef MICROSTACK_PROXY
-void ILibAsyncSocket_ConnectToProxy(void* socketModule, struct sockaddr *localInterface, struct sockaddr *remoteAddress, struct sockaddr *proxyAddress, char* proxyUser, char* proxyPass, ILibAsyncSocket_OnInterrupt InterruptPtr, void *user);
+void ILibAsyncSocket_ConnectToProxy(void* socketModule, struct sockaddr *localInterface, struct sockaddr *remoteAddress, struct sockaddr *proxyAddress, ILibAsyncSocket_OnInterrupt InterruptPtr, void *user);
 #endif
 
 enum ILibAsyncSocket_SendStatus ILibAsyncSocket_SendTo(ILibAsyncSocket_SocketModule socketModule, char* buffer, int length, struct sockaddr *remoteAddress, enum ILibAsyncSocket_MemoryOwnership UserFree);

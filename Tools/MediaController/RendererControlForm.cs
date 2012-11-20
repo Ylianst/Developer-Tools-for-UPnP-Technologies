@@ -860,24 +860,32 @@ namespace UPnpMediaController
 			}
 		}
 
+        private delegate void VolumeChangedHandlerSinkHandler(AVConnection sender, UInt16 Volume);
 		private void VolumeChangedHandlerSink(AVConnection sender, UInt16 Volume)
 		{
 			if (connection != sender) return;
+            if (InvokeRequired) { Invoke(new VolumeChangedHandlerSinkHandler(VolumeChangedHandlerSink), sender, Volume); return; }
 
 			volumeTrackBar.Value = (int)connection.MasterVolume;
 		}
 
+        private delegate void CurrentTrackChangedHandler(AVConnection sender, uint track);
 		private void CurrentTrackChangedHandlerSink(AVConnection sender, uint track) 
 		{
 			if (sender != connection) return;
 			if (mediaProgressBar.Tag != null) return;
+            if (InvokeRequired) { Invoke(new CurrentTrackChangedHandler(CurrentTrackChangedHandlerSink), sender, track); return; }
+
 			UpdateUserInterface();
 		}
 
+        private delegate void PositionChangedHandler(AVConnection sender, TimeSpan position);
 		private void PositionChangedHandlerSink(AVConnection sender, TimeSpan position)
 		{
 			if (sender != connection) return;
 			if (mediaProgressBar.Tag != null) return;
+            if (InvokeRequired) { Invoke(new PositionChangedHandler(PositionChangedHandlerSink), sender, position); return; }
+
 			UpdateUserInterface();
 		}
 
@@ -910,6 +918,8 @@ namespace UPnpMediaController
 
 		private void UpdateUserInterface() 
 		{
+            if (InvokeRequired) { Invoke(new System.Threading.ThreadStart(UpdateUserInterface)); return; }
+
 			if (renderer.Connections.Count == 0) 
 			{
 				rendererInformationLabel.Text = "No connections";
