@@ -572,7 +572,7 @@ int ILibGetLocalIPv6IndexList(int** indexlist)
 	while (pAddressesPtr != NULL)
 	{
 		// Skip any loopback adapters
-		if (pAddressesPtr->PhysicalAddressLength != 0 && pAddressesPtr->OperStatus == IfOperStatusUp)
+		if (pAddressesPtr->PhysicalAddressLength != 0 && pAddressesPtr->ReceiveOnly != 1 && pAddressesPtr->NoMulticast != 1 && pAddressesPtr->OperStatus == IfOperStatusUp)
 		{
 			// For each adapter
 			AddrCount++;
@@ -588,7 +588,7 @@ int ILibGetLocalIPv6IndexList(int** indexlist)
 	while (pAddressesPtr != NULL)
 	{
 		// Skip any loopback adapters
-		if (pAddressesPtr->PhysicalAddressLength != 0 && pAddressesPtr->OperStatus == IfOperStatusUp)
+		if (pAddressesPtr->PhysicalAddressLength != 0 && pAddressesPtr->ReceiveOnly != 1 && pAddressesPtr->NoMulticast != 1 && pAddressesPtr->OperStatus == IfOperStatusUp)
 		{
 			*ptr = pAddressesPtr->IfIndex;
 			ptr++;
@@ -654,7 +654,7 @@ int ILibGetLocalIPv6List(struct sockaddr_in6** list)
 		while (pAddressesPtr != NULL)
 		{
 			// Skip any loopback adapters
-			if (pAddressesPtr->PhysicalAddressLength != 0 && pAddressesPtr->OperStatus == IfOperStatusUp)
+			if (pAddressesPtr->PhysicalAddressLength != 0 && pAddressesPtr->ReceiveOnly != 1 && pAddressesPtr->NoMulticast != 1 && pAddressesPtr->OperStatus == IfOperStatusUp)
 			{
 				memcpy(ptr, pAddressesPtr->FirstUnicastAddress->Address.lpSockaddr, pAddressesPtr->FirstUnicastAddress->Address.iSockaddrLength);
 				ptr++;
@@ -4386,15 +4386,14 @@ int ILibBase64Encode(unsigned char* input, const int inputlen, unsigned char** o
 		ILibencodeblock(in, out, 1);
 		out += 4;
 	}
-	else
-		if ((input+inputlen)-in == 2)
-		{
-			ILibencodeblock(in, out, 2);
-			out += 4;
-		}
-		*out = 0;
+	else if ((input+inputlen)-in == 2)
+	{
+		ILibencodeblock(in, out, 2);
+		out += 4;
+	}
+	*out = 0;
 
-		return (int)(out-*output);
+	return (int)(out-*output);
 }
 
 /* Decode 4 '6-bit' characters into 3 8-bit binary bytes */
@@ -4624,6 +4623,23 @@ int ILibXmlEscape(char* outdata, const char* indata)
 	return (int)(out - outdata);
 }
 
+// Return the number of milliseconds until trigger, -1 if not found.
+long long ILibLifeTime_GetExpiration(void *LifetimeMonitorObject, void *data)
+{
+	void *node;
+	struct LifeTimeMonitorData *temp;
+	struct ILibLifeTime *LifeTimeMonitor = (struct ILibLifeTime*)LifetimeMonitorObject;
+
+	node = ILibLinkedList_GetNode_Head(LifeTimeMonitor->ObjectList);
+	while (node != NULL)
+	{
+		temp = (struct LifeTimeMonitorData*)ILibLinkedList_GetDataFromNode(node);
+		if (temp->data == data) return temp->ExpirationTick;
+		node = ILibLinkedList_GetNextNode(node);
+	}
+	return -1;
+}
+
 /*! \fn ILibLifeTime_AddEx(void *LifetimeMonitorObject,void *data, int ms, void* Callback, void* Destroy)
 \brief Registers a timed callback with millisecond granularity
 \param LifetimeMonitorObject The \a ILibLifeTime object to add the timed callback to
@@ -4716,7 +4732,7 @@ void ILibLifeTime_Check(void *LifeTimeMonitorObject, void *readset, void *writes
 	//
 	// This will speed things up by skipping the timer check
 	//
-	if ((LifeTimeMonitor->NextTriggerTick > CurrentTick) && (LifeTimeMonitor->NextTriggerTick != (unsigned long)~0) && (*blocktime > (int)(LifeTimeMonitor->NextTriggerTick - CurrentTick)))
+	if ((LifeTimeMonitor->NextTriggerTick > CurrentTick) && (LifeTimeMonitor->NextTriggerTick != -1) && (*blocktime > (int)(LifeTimeMonitor->NextTriggerTick - CurrentTick)))
 	{
 		*blocktime = (int)(LifeTimeMonitor->NextTriggerTick - CurrentTick);
 		return;
@@ -4791,7 +4807,6 @@ void ILibLifeTime_Check(void *LifeTimeMonitorObject, void *readset, void *writes
 		int delta = (int)(LifeTimeMonitor->NextTriggerTick - CurrentTick);
 		if (delta < 1000) *blocktime = 1000; else *blocktime = delta;
 	}
-
 }
 
 /*! \fn ILibLifeTime_Remove(void *LifeTimeToken, void *data)
@@ -6611,6 +6626,27 @@ int ILibInet_pton(int af, const char *src, void *dst)
 }
 
 #endif
+
+int ILibResolve(char* hostname, char* service, struct sockaddr_in6* addr6)
+{
+	int r;
+    struct addrinfo *result = NULL;
+    struct addrinfo hints;
+	
+	memset(addr6, 0, sizeof(struct sockaddr_in6));
+	memset(&hints, 0, sizeof(hints));
+	hints.ai_family = AF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_protocol = IPPROTO_TCP;
+
+	r = getaddrinfo(hostname, service, &hints, &result);
+	if (r != 0) { return r; }
+	if (result == NULL) return -1;
+	if (result->ai_family == AF_INET) { memcpy(addr6, result->ai_addr, sizeof(struct sockaddr_in)); }
+	if (result->ai_family == AF_INET6) { memcpy(addr6, result->ai_addr, sizeof(struct sockaddr_in6)); }
+	freeaddrinfo(result);
+	return 0;
+}
 
 // Log a critical error to file
 void ILibCriticalLog (const char* msg, const char* file, int line, int user1, int user2)

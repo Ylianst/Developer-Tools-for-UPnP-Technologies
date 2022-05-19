@@ -20,7 +20,7 @@ using System.Collections;
 using System.Windows.Forms;
 using System.ComponentModel;
 
-namespace UPnPAuthor
+namespace ServiceAuthor
 {
 	/// <summary>
 	/// Summary description for DesignComplexType.

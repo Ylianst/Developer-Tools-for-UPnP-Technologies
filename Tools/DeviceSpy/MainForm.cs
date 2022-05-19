@@ -991,7 +991,7 @@ namespace UPnpSpy
                     {
                         if (d.PresentationURL.StartsWith("/") == true)
                         {
-                            deviceURL = "http://" + d.RemoteEndPoint.Address.ToString() + ":" + d.PresentationURL;
+                            deviceURL = "http://" + d.RemoteEndPoint.Address.ToString() + ":" + d.RemoteEndPoint.Port.ToString() + d.PresentationURL;
                         }
                         else
                         {
@@ -1310,9 +1310,17 @@ namespace UPnpSpy
 
         private void listInfoContextMenu_Popup(object sender, System.EventArgs e)
         {
-            copyValueCpMenuItem.Visible = (listInfo.SelectedItems.Count != 0);
-            string link = listInfo.SelectedItems[0].SubItems[1].Text.ToLower();
-            openWebPageMenuItem.Visible = (link.StartsWith("http://") || link.StartsWith("https://"));
+            if (listInfo.SelectedItems.Count != 0)
+            {
+                copyValueCpMenuItem.Visible = true;
+                string link = listInfo.SelectedItems[0].SubItems[1].Text.ToLower();
+                openWebPageMenuItem.Visible = (link.StartsWith("http://") || link.StartsWith("https://"));
+            }
+            else
+            {
+                copyValueCpMenuItem.Visible = false;
+                openWebPageMenuItem.Visible = false;
+            }
         }
 
         private void copyValueCpMenuItem_Click(object sender, System.EventArgs e)

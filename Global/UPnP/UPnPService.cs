@@ -2249,6 +2249,12 @@ namespace OpenSource.UPnP
                 this.Minor = int.Parse(mn);
             }
         }
+        /// <summary>
+        /// Parses a UPnPservice from an xml string, This is the service part as contained within the Device description
+        /// xml. Parsing the the service description xml is done in <see cref="UPnPService.ParseSCPD">ParseSCPD</see>
+        /// </summary>
+        /// <param name="XML">The xml to be parsed</param>
+        /// <returns>a UPnPService object parsed from the xml</returns>
         static internal UPnPService Parse(String XML)
         {
             StringReader MyString = new StringReader(XML);
@@ -2378,12 +2384,23 @@ namespace OpenSource.UPnP
             SubscriberTable[SID] = sinfo;
             return (true);
         }
+        /// <summary>
+        /// Creates a new UPnPservice object from the provided xml
+        /// </summary>
+        /// <param name="SCPDXML">xml containing the service description</param>
+        /// <returns>new UPnPService parsed from the xml</returns>
         public static UPnPService FromSCPD(string SCPDXML)
         {
             UPnPService s = new UPnPService(1);
             s.ParseSCPD(SCPDXML);
             return (s);
         }
+
+        /// <summary>
+        /// Parses a service xml into the UPnPservice instance. The instance will have been created by
+        /// parsing the Service element from the Device xml, see <see cref="UPnPService.Parse">Parse method</see>
+        /// </summary>
+        /// <param name="XML">the xml containing the service description</param>
         internal void ParseSCPD(String XML)
         {
             bool loadSchema = false;
@@ -2460,7 +2477,20 @@ namespace OpenSource.UPnP
                         {
                             if (XMLDoc.LocalName == "action")
                             {
-                                ParseActionXml("<action>\r\n" + XMLDoc.ReadInnerXml() + "</action>");
+                                string actionxml = "Failed to read the Action element from the source xml.";
+                                try
+                                {
+                                    //TODO: DONE Resilience case 4 & 2 - if action fails itself (or underlying arguments), don't add it.
+                                    //Wrap in try-catch
+                                    actionxml = "<action>\r\n" + XMLDoc.ReadInnerXml() + "</action>";
+                                    ParseActionXml(actionxml);
+                                }
+                                catch (Exception e)
+                                {
+                                    OpenSource.Utilities.EventLogger.Log(this, System.Diagnostics.EventLogEntryType.Error, "Invalid Action XML");
+                                    OpenSource.Utilities.EventLogger.Log(e, "XML content: \r\n" + actionxml);
+                                    OpenSource.Utilities.EventLogger.Log(this, System.Diagnostics.EventLogEntryType.Warning, "Dropping failed Action and commencing parsing remainder of device");
+                                }
                             }
                             if (!XMLDoc.IsStartElement())
                             {
@@ -2484,21 +2514,31 @@ namespace OpenSource.UPnP
                             {
                                 if (XMLDoc.LocalName == "stateVariable")
                                 {
-                                    evented = "no";
-                                    multicast = "no";
+                                    // TODO: DONE Resilience case 1 - wrap block in try-catch, with error logging
+                                    try
+                                    {
+                                        evented = "no";
+                                        multicast = "no";
 
-                                    XMLDoc.MoveToAttribute("sendEvents");
-                                    if (XMLDoc.LocalName == "sendEvents")
-                                    {
-                                        evented = XMLDoc.GetAttribute("sendEvents");
+                                        XMLDoc.MoveToAttribute("sendEvents");
+                                        if (XMLDoc.LocalName == "sendEvents")
+                                        {
+                                            evented = XMLDoc.GetAttribute("sendEvents");
+                                        }
+                                        XMLDoc.MoveToAttribute("multicast");
+                                        if (XMLDoc.LocalName == "multicast")
+                                        {
+                                            multicast = XMLDoc.GetAttribute("multicast");
+                                        }
+                                        XMLDoc.MoveToContent();
+                                        ParseStateVarXml(evented, multicast, XMLDoc);
                                     }
-                                    XMLDoc.MoveToAttribute("multicast");
-                                    if (XMLDoc.LocalName == "multicast")
+                                    catch (Exception e)
                                     {
-                                        multicast = XMLDoc.GetAttribute("multicast");
+                                        OpenSource.Utilities.EventLogger.Log(this, System.Diagnostics.EventLogEntryType.Error, "Invalid StateVariable XML");
+                                        OpenSource.Utilities.EventLogger.Log(e);
+                                        OpenSource.Utilities.EventLogger.Log(this, System.Diagnostics.EventLogEntryType.Warning, "Dropping failed StateVariable and commencing parsing remainder of device");
                                     }
-                                    XMLDoc.MoveToContent();
-                                    ParseStateVarXml(evented, multicast, XMLDoc);
                                 }
                                 if (!XMLDoc.IsStartElement())
                                 {
@@ -2524,18 +2564,45 @@ namespace OpenSource.UPnP
                 }
                 // End of While
 
-
+                // TODO: DONE Resilience case 3 - log error, and mark faulty Action 
                 // Add Associations
+                System.Collections.ArrayList skiplist = new System.Collections.ArrayList();
                 foreach (UPnPAction A in this.Actions)
                 {
+                    try
+                    {
+                        foreach (UPnPArgument G in A.Arguments)
+                        {
+                            if (G.RelatedStateVar == null)
+                            {
+                                throw (new InvalidRelatedStateVariableException("Action: " + A.Name + " Arg: " + G.Name + " Contains invalid reference: " + G.StateVarName));
+                            }
+                            G.RelatedStateVar.AddAssociation(A.Name, G.Name);
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        // adding it failed, so add to skiplist
+                        skiplist.Add(A);
+                        OpenSource.Utilities.EventLogger.Log(this, System.Diagnostics.EventLogEntryType.Error, "Invalid Action; could not create Argument-Statevariable association for action: " + A.Name);
+                        OpenSource.Utilities.EventLogger.Log(e);
+                        OpenSource.Utilities.EventLogger.Log(this, System.Diagnostics.EventLogEntryType.Warning, "Dropping failed StateVariable and arguments, commencing parsing remainder of actions");
+                    }
+                }
+                // Ditch the faulty ones
+                // TODO: DONE Resilience case 3 - remove faulty Action and its Arguments and their relations
+                foreach (UPnPAction A in skiplist)
+                {
+                    // remove previously added associations
                     foreach (UPnPArgument G in A.Arguments)
                     {
-                        if (G.RelatedStateVar == null)
+                        if (G.RelatedStateVar != null)
                         {
-                            throw (new InvalidRelatedStateVariableException("Action: " + A.Name + " Arg: " + G.Name + " Contains invalid reference: " + G.StateVarName));
+                            G.RelatedStateVar.RemoveAssociation(A.Name, G.Name);
                         }
-                        G.RelatedStateVar.AddAssociation(A.Name, G.Name);
                     }
+                    // remove action itself
+                    RemoteMethods.Remove(A.Name);
                 }
             }
             // End of If
